@@ -65,40 +65,6 @@ export function Footer() {
               {f.desc}
             </p>
 
-            {/* Social Icons */}
-            <div style={{ display: "flex", gap: "0.65rem" }}>
-              {socialLinks.map((s, i) => (
-                <a
-                  key={i}
-                  href={s.href}
-                  style={{
-                    width: "36px",
-                    height: "36px",
-                    borderRadius: "50%",
-                    border: "1px solid rgba(255,255,255,0.2)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "rgba(255,255,255,0.75)",
-                    fontSize: "1rem",
-                    textDecoration: "none",
-                    transition: "all 0.25s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.background = "var(--gold)";
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--gold)";
-                    (e.currentTarget as HTMLAnchorElement).style.color = "#fff";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.2)";
-                    (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.75)";
-                  }}
-                >
-                  <i className={s.icon} />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* ── Column 2: Quick Links (Navbar) ── */}

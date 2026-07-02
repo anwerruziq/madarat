@@ -749,3 +749,11 @@
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
+. p r o d u c t - c a r d - h o v e r : h o v e r  
+ i m g  
+   t r a n s f o r m :   s c a l e ( 1 . 0 8 )   ! i m p o r t a n t ;    
+ . p r o d u c t - c a r d - h o v e r : h o v e r  
+   b o x - s h a d o w :   0   1 5 p x   4 0 p x   r g b a ( 0 ,   0 ,   0 ,   0 . 1 5 )   ! i m p o r t a n t ;   t r a n s f o r m :   t r a n s l a t e Y ( - 5 p x ) ;    
+ . p r o d u c t - c a r d - h o v e r  
+   t r a n s i t i o n :   a l l   0 . 4 s   c u b i c - b e z i e r ( 0 . 1 6 ,   1 ,   0 . 3 ,   1 )   ! i m p o r t a n t ;    
+ 

@@ -155,12 +155,12 @@ export function ContactSection() {
               >
                 {t.contact.followUs}
               </div>
-              <div style={{ display: "flex", gap: "1rem" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
                 {[
                   { label: "Instagram", icon: <i className="bx bxl-instagram"></i> },
                   { label: "WhatsApp", icon: <i className="bx bxl-whatsapp"></i> },
                   { label: "Snapchat", icon: <i className="bx bxl-snapchat"></i> },
-                  { label: "X", icon: <i className="bx bxl-twitter"></i> },
+                  { label: "X", icon: <i className="bx bxl-meta"></i> },
                   { label: "LinkedIn", icon: <i className="bx bxl-linkedin"></i> },
                   { label: "YouTube", icon: <i className="bx bxl-youtube"></i> },
                   { label: "TikTok", icon: <i className="bx bxl-tiktok"></i> },

@@ -129,12 +129,12 @@ export function Footer() {
                 <i className="bx bx-share-alt" style={{ color: "var(--gold)", marginInlineEnd: "0.4rem" }} />
                 {t.dir === "rtl" ? "تابعنا على" : "Follow Us"}
               </div>
-              <div style={{ display: "flex", gap: "0.45rem", marginTop: "0.6rem" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "0.6rem", maxWidth: "180px" }}>
                 {[
                   { icon: "bx bxl-instagram", href: "#", name: "Instagram" },
                   { icon: "bx bxl-whatsapp", href: "#", name: "WhatsApp" },
                   { icon: "bx bxl-snapchat", href: "#", name: "Snapchat" },
-                  { icon: "bx bxl-twitter", href: "#", name: "X" },
+                  { icon: "bx bxl-meta", href: "#", name: "X" },
                   { icon: "bx bxl-linkedin", href: "#", name: "LinkedIn" },
                   { icon: "bx bxl-youtube", href: "#", name: "YouTube" },
                   { icon: "bx bxl-tiktok", href: "#", name: "TikTok" },

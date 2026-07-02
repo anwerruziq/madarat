@@ -115,44 +115,6 @@ export function HeroSection() {
           `}
         </style>
 
-        {/* Animated Background Wrapper for Video and Overlay */}
-        <div
-          className="hero-video-animate-in"
-          style={{
-            position: "absolute",
-            inset: 0,
-            overflow: "hidden",
-          }}
-        >
-          {/* Video Background */}
-          <video
-            className="hero-bg"
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              position: "absolute",
-              inset: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          >
-            <source src="/حول_الصوره_لفيديو_اجعل_الكاميرا_202607011653.mp4" type="video/mp4" />
-          </video>
-          {/* Dark overlay for text readability */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: "linear-gradient(to right, rgba(0, 20, 10, 0.8) 0%, rgba(0, 20, 10, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%)",
-              backgroundColor: "rgba(0, 30, 20, 0.4)",
-            }}
-          />
-        </div>
-
         {/* Content */}
         <div
           key={t.dir}
@@ -176,6 +138,7 @@ export function HeroSection() {
               fontWeight: "500",
               marginBottom: "0.5rem",
               fontFamily: "Alexandria, sans-serif",
+              color: "var(--text-primary)",
             }}
           >
             {t.hero.subtitle}
@@ -189,6 +152,7 @@ export function HeroSection() {
               marginBottom: "1.5rem",
               lineHeight: "1.2",
               fontFamily: "Alexandria, sans-serif",
+              color: "var(--text-primary)",
             }}
           >
             {t.hero.title}
@@ -198,11 +162,10 @@ export function HeroSection() {
             className="hero-desc-animate"
             style={{
               fontSize: "clamp(1rem, 1.2vw, 1.15rem)",
-              color: "rgba(255, 255, 255, 0.95)",
+              color: "var(--text-secondary)",
               maxWidth: "600px",
               marginBottom: "2.5rem",
               lineHeight: "1.8",
-              textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
             {t.hero.desc}
@@ -210,10 +173,10 @@ export function HeroSection() {
 
           {/* Action Buttons */}
           <div className="hero-btn-animate" style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "flex-start" }}>
-            <a href="#contact" className="btn-primary" style={{ padding: "0.6rem 1.4rem", fontSize: "0.95rem", background: "#ffffff", color: "var(--navy)", borderColor: "#ffffff", borderRadius: "8px", fontWeight: "700" }}>
+            <a href="#contact" className="btn-primary" style={{ padding: "0.6rem 1.4rem", fontSize: "0.95rem", background: "var(--navy)", color: "#ffffff", borderColor: "var(--navy)", borderRadius: "8px", fontWeight: "700" }}>
               {t.hero.cta1}
             </a>
-            <a href="#services" className="btn-outline" style={{ padding: "0.6rem 1.4rem", fontSize: "0.95rem", color: "#ffffff", borderColor: "#ffffff", borderRadius: "8px", fontWeight: "700", background: "rgba(0,0,0,0.4)" }}>
+            <a href="#services" className="btn-outline" style={{ padding: "0.6rem 1.4rem", fontSize: "0.95rem", color: "var(--navy)", borderColor: "var(--navy)", borderRadius: "8px", fontWeight: "700", background: "transparent" }}>
               {t.hero.cta2}
             </a>
           </div>
@@ -238,7 +201,7 @@ export function HeroSection() {
           style={{
             width: "24px",
             height: "40px",
-            border: "2px solid rgba(255, 255, 255, 0.4)",
+            border: "2px solid var(--navy)",
             borderRadius: "12px",
             display: "flex",
             justifyContent: "center",
@@ -249,7 +212,7 @@ export function HeroSection() {
             style={{
               width: "4px",
               height: "8px",
-              background: "#ffffff",
+              background: "var(--navy)",
               borderRadius: "2px",
               animation: "float 1.5s ease-in-out infinite",
             }}

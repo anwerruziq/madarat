@@ -27,7 +27,6 @@ export function Navbar() {
         insetInlineEnd: 0,
         zIndex: 1000,
         backgroundColor: navBgColor,
-        borderBottom: `2px solid ${navTextColor}`,
         animation: "slideDownNav 0.6s ease-out forwards",
       }}
     >
@@ -88,21 +87,17 @@ export function Navbar() {
             title={lang === "ar" ? "Switch to English" : "التبديل للعربية"}
             style={{
               background: "none",
-              border: `1.5px solid ${navTextColor}`,
-              borderRadius: "50%",
-              width: "38px",
-              height: "38px",
+              border: "none",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               cursor: "pointer",
               color: navTextColor,
-              fontSize: "1.2rem",
-              transition: "all 0.3s ease",
-              position: "relative",
+              fontSize: "1.8rem",
+              transition: "transform 0.2s ease",
             }}
           >
-            <i className="bx bx-globe" style={{ fontSize: "1.25rem" }}></i>
+            <i className="bx bx-globe"></i>
           </button>
 
           {/* Hamburger - Mobile only */}

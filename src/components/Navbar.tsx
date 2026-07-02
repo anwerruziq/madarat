@@ -77,25 +77,6 @@ export function Navbar() {
             </a>
           ))}
 
-          {/* CTA Button - Desktop */}
-          <a
-            href="#contact"
-            className="nav-cta-btn"
-            style={{
-              background: navTextColor,
-              color: navBgColor,
-              padding: "0.5rem 1.2rem",
-              borderRadius: "6px",
-              fontWeight: "700",
-              fontFamily: "Alexandria, sans-serif",
-              fontSize: "0.9rem",
-              textDecoration: "none",
-              transition: "all 0.3s ease",
-              whiteSpace: "nowrap",
-            }}
-          >
-            {t.nav.cta}
-          </a>
         </div>
 
         {/* 3. Right side: Language icon + Hamburger */}
@@ -205,27 +186,6 @@ export function Navbar() {
             </a>
           ))}
 
-          {/* CTA Button - Mobile */}
-          <a
-            href="#contact"
-            onClick={() => setMobileOpen(false)}
-            style={{
-              display: "block",
-              textAlign: "center",
-              marginTop: "1rem",
-              background: navTextColor,
-              color: navBgColor,
-              padding: "0.75rem 1.5rem",
-              borderRadius: "8px",
-              fontWeight: "700",
-              fontFamily: "Alexandria, sans-serif",
-              fontSize: "1rem",
-              textDecoration: "none",
-              animation: `fadeSlideIn 0.3s ease-out ${links.length * 0.05}s both`,
-            }}
-          >
-            {t.nav.cta}
-          </a>
         </div>
       )}
 

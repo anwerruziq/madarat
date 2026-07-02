@@ -79,14 +79,12 @@ export function ContactSection() {
 
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "3rem",
-            alignItems: "start",
+            maxWidth: "800px",
+            margin: "0 auto",
           }}
         >
           {/* Contact Info */}
-          <div className="reveal-left">
+          <div className="reveal-up">
             <h3
               style={{
                 fontFamily: "Alexandria, sans-serif",
@@ -94,19 +92,23 @@ export function ContactSection() {
                 color: "var(--text-heading)",
                 fontSize: "1.25rem",
                 marginBottom: "2rem",
+                textAlign: "center"
               }}
             >
               {t.contact.infoTitle}
             </h3>
 
-            <div style={{ display: "grid", gap: "1.25rem", marginBottom: "2.5rem" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.25rem", marginBottom: "2.5rem" }}>
               {t.contact.infoItems.map((info, i) => (
                 <div
                   key={i}
                   style={{
                     display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center",
                     gap: "1rem",
-                    padding: "1.25rem",
+                    padding: "1.5rem",
                     background: "var(--bg-card)",
                     border: "1px solid var(--card-border)",
                     borderRadius: "8px",
@@ -119,14 +121,14 @@ export function ContactSection() {
                     (e.currentTarget as HTMLElement).style.borderColor = "var(--card-border)";
                   }}
                 >
-                  <span style={{ fontSize: "1.4rem", flexShrink: 0, color: "var(--gold)" }}>{contactIcons[i]}</span>
+                  <span style={{ fontSize: "2rem", color: "var(--gold)" }}>{contactIcons[i]}</span>
                   <div>
                     <div
                       style={{
-                        fontSize: "0.85rem",
+                        fontSize: "1rem",
                         color: "var(--gold)",
                         fontWeight: "700",
-                        marginBottom: "0.4rem",
+                        marginBottom: "0.5rem",
                       }}
                     >
                       {info.title}
@@ -142,10 +144,10 @@ export function ContactSection() {
             </div>
 
             {/* Social Links */}
-            <div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
               <div
                 style={{
-                  fontSize: "0.9rem",
+                  fontSize: "1rem",
                   color: "var(--gold)",
                   fontWeight: "700",
                   marginBottom: "1rem",
@@ -153,7 +155,7 @@ export function ContactSection() {
               >
                 {t.contact.followUs}
               </div>
-              <div style={{ display: "flex", gap: "0.75rem" }}>
+              <div style={{ display: "flex", gap: "1rem" }}>
                 {[
                   { label: "LinkedIn", icon: <i className="bx bxl-linkedin"></i> },
                   { label: "X", icon: <i className="bx bxl-twitter"></i> },
@@ -163,15 +165,15 @@ export function ContactSection() {
                   <button
                     key={i}
                     style={{
-                      width: "44px",
-                      height: "44px",
-                      borderRadius: "8px",
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
                       background: "var(--bg-card)",
                       border: "1px solid var(--card-border)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      fontSize: "1.2rem",
+                      fontSize: "1.5rem",
                       cursor: "pointer",
                       transition: "all 0.3s ease",
                       color: "var(--text-heading)",
@@ -181,11 +183,13 @@ export function ContactSection() {
                       const el = e.currentTarget;
                       el.style.borderColor = "var(--gold)";
                       el.style.color = "var(--gold)";
+                      el.style.transform = "translateY(-3px)";
                     }}
                     onMouseLeave={(e) => {
                       const el = e.currentTarget;
                       el.style.borderColor = "var(--card-border)";
                       el.style.color = "var(--text-heading)";
+                      el.style.transform = "translateY(0)";
                     }}
                   >
                     {social.icon}
@@ -193,152 +197,6 @@ export function ContactSection() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="reveal-right">
-            {submitted ? (
-              <div
-                style={{
-                  padding: "3rem",
-                  background: "var(--bg-card)",
-                  border: "1px solid var(--card-border)",
-                  borderRadius: "12px",
-                  textAlign: "center",
-                }}
-              >
-                <div style={{ fontSize: "3rem", marginBottom: "1rem", color: "#28a745" }}><i className="bx bx-check-circle"></i></div>
-                <h3
-                  style={{
-                    fontFamily: "Alexandria, sans-serif",
-                    fontWeight: "700",
-                    color: "var(--text-heading)",
-                    fontSize: "1.3rem",
-                    marginBottom: "0.75rem",
-                  }}
-                >
-                  {t.contact.successTitle}
-                </h3>
-                <p style={{ color: "var(--text-secondary)", lineHeight: "1.8" }}>
-                  {t.contact.successDesc}
-                </p>
-              </div>
-            ) : (
-              <form
-                onSubmit={handleSubmit}
-                style={{
-                  padding: "2.5rem",
-                  background: "var(--bg-card)",
-                  border: "1px solid var(--card-border)",
-                  borderRadius: "12px",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "Alexandria, sans-serif",
-                    fontWeight: "700",
-                    color: "var(--text-heading)",
-                    fontSize: "1.2rem",
-                    marginBottom: "2rem",
-                  }}
-                >
-                  {t.contact.formTitle}
-                </h3>
-
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.4rem" }}>
-                      {t.contact.fields.name}
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="form-input"
-                      placeholder={t.contact.fields.namePlaceholder}
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    />
-                  </div>
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.4rem" }}>
-                      {t.contact.fields.company}
-                    </label>
-                    <input
-                      type="text"
-                      className="form-input"
-                      placeholder={t.contact.fields.companyPlaceholder}
-                      value={form.company}
-                      onChange={(e) => setForm({ ...form, company: e.target.value })}
-                    />
-                  </div>
-                </div>
-
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.4rem" }}>
-                      {t.contact.fields.phone}
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      className="form-input"
-                      placeholder={t.contact.fields.phonePlaceholder}
-                      value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    />
-                  </div>
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.4rem" }}>
-                      {t.contact.fields.email}
-                    </label>
-                    <input
-                      type="email"
-                      className="form-input"
-                      placeholder={t.contact.fields.emailPlaceholder}
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    />
-                  </div>
-                </div>
-
-                <div style={{ marginBottom: "1rem" }}>
-                  <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.4rem" }}>
-                    {t.contact.fields.service}
-                  </label>
-                  <select
-                    className="form-input"
-                    value={form.service}
-                    onChange={(e) => setForm({ ...form, service: e.target.value })}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <option value="">{t.contact.fields.serviceDefault}</option>
-                    {t.contact.fields.serviceOptions.map((opt, i) => (
-                      <option key={i} value={opt.toLowerCase().replace(/\s+/g, "-")}>{opt}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div style={{ marginBottom: "1.5rem" }}>
-                  <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.4rem" }}>
-                    {t.contact.fields.message}
-                  </label>
-                  <textarea
-                    required
-                    rows={4}
-                    className="form-input"
-                    placeholder={t.contact.fields.messagePlaceholder}
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    style={{ resize: "vertical", minHeight: "100px" }}
-                  />
-                </div>
-
-                <button type="submit" className="btn-primary" style={{ width: "100%", justifyContent: "center" }}>
-                  <span>{t.contact.fields.submit}</span>
-                </button>
-              </form>
-            )}
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { useLang } from "@/context/LanguageContext";
 export function ProjectsSection() {
   const ref = useRef<HTMLDivElement>(null);
   const { t, lang } = useLang();
-  const [activeFilter, setActiveFilter] = useState(0); // index into filters array
+  const filtered = t.projects.items;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,22 +23,6 @@ export function ProjectsSection() {
     ref.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
-
-  // Reset filter to "All" when language changes
-  useEffect(() => {
-    setActiveFilter(0);
-  }, [lang]);
-
-  const filtered =
-    activeFilter === 0
-      ? t.projects.items
-      : t.projects.items.filter((_, i) => {
-          // Map project categories back to filter index
-          const arCategories = ["استشارات مالية", "مراجعة وتدقيق", "استشارات زكوية وضريبية", "دراسات جدوى"];
-          const enCategories = ["Financial Consulting", "Review & Auditing", "Zakat & Tax Advisory", "Feasibility Studies"];
-          const categories = lang === "ar" ? arCategories : enCategories;
-          return t.projects.items[i].category === categories[activeFilter - 1];
-        });
 
   return (
     <section
@@ -79,39 +63,6 @@ export function ProjectsSection() {
           >
             {t.projects.desc}
           </p>
-        </div>
-
-        {/* Filter Tabs */}
-        <div
-          className="reveal"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: "0.75rem",
-            marginBottom: "3rem",
-          }}
-        >
-          {t.projects.filters.map((cat, idx) => (
-            <button
-              key={idx}
-              onClick={() => setActiveFilter(idx)}
-              style={{
-                padding: "0.5rem 1.25rem",
-                borderRadius: "30px",
-                border: activeFilter === idx ? "2px solid var(--gold)" : "1px solid var(--border-light)",
-                background: activeFilter === idx ? "var(--btn-primary-bg)" : "transparent",
-                color: activeFilter === idx ? "var(--btn-primary-text)" : "var(--text-secondary)",
-                fontFamily: "Alexandria, sans-serif",
-                fontWeight: activeFilter === idx ? "600" : "400",
-                fontSize: "0.95rem",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-              }}
-            >
-              {cat}
-            </button>
-          ))}
         </div>
 
         {/* Projects Grid */}

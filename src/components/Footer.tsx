@@ -15,13 +15,6 @@ export function Footer() {
     ],
   };
 
-  const socialLinks = [
-    { icon: "bx bxl-facebook", href: "#" },
-    { icon: "bx bxl-twitter", href: "#" },
-    { icon: "bx bxl-linkedin", href: "#" },
-    { icon: "bx bxl-instagram", href: "#" },
-  ];
-
   return (
     <footer
       style={{
@@ -138,10 +131,13 @@ export function Footer() {
               </div>
               <div style={{ display: "flex", gap: "0.45rem", marginTop: "0.6rem" }}>
                 {[
-                  { icon: "bx bxl-facebook", href: "#" },
-                  { icon: "bx bxl-twitter", href: "#" },
-                  { icon: "bx bxl-linkedin", href: "#" },
-                  { icon: "bx bxl-instagram", href: "#" },
+                  { icon: "bx bxl-instagram", href: "#", name: "Instagram" },
+                  { icon: "bx bxl-whatsapp", href: "#", name: "WhatsApp" },
+                  { icon: "bx bxl-snapchat", href: "#", name: "Snapchat" },
+                  { icon: "bx bxl-twitter", href: "#", name: "X" },
+                  { icon: "bx bxl-linkedin", href: "#", name: "LinkedIn" },
+                  { icon: "bx bxl-youtube", href: "#", name: "YouTube" },
+                  { icon: "bx bxl-tiktok", href: "#", name: "TikTok" },
                 ].map((s, i) => (
                   <a
                     key={i}

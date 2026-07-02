@@ -157,10 +157,13 @@ export function ContactSection() {
               </div>
               <div style={{ display: "flex", gap: "1rem" }}>
                 {[
-                  { label: "LinkedIn", icon: <i className="bx bxl-linkedin"></i> },
-                  { label: "X", icon: <i className="bx bxl-twitter"></i> },
-                  { label: "YouTube", icon: <i className="bx bxl-youtube"></i> },
                   { label: "Instagram", icon: <i className="bx bxl-instagram"></i> },
+                  { label: "WhatsApp", icon: <i className="bx bxl-whatsapp"></i> },
+                  { label: "Snapchat", icon: <i className="bx bxl-snapchat"></i> },
+                  { label: "X", icon: <i className="bx bxl-twitter"></i> },
+                  { label: "LinkedIn", icon: <i className="bx bxl-linkedin"></i> },
+                  { label: "YouTube", icon: <i className="bx bxl-youtube"></i> },
+                  { label: "TikTok", icon: <i className="bx bxl-tiktok"></i> },
                 ].map((social, i) => (
                   <button
                     key={i}

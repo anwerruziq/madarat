@@ -1,0 +1,751 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/Alexandria-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/Alexandria-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/Alexandria-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/Alexandria-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/Alexandria-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/Alexandria-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/Alexandria-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/Alexandria-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/Alexandria-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* ============================================
+   COLOR SYSTEM — White / Navy / Gold
+   ============================================ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+}
+
+/* ============================================
+   SINGLE LIGHT MODE — White / Navy / Gold
+   ============================================ */
+:root {
+  --radius: 0.5rem;
+
+  /* Brand colors */
+  --gold: #b8960c;
+  --gold-light: #d4b02a;
+  --gold-dark: #8a6e09;
+
+  --navy: #001b38;
+  --navy-light: #0a2d52;
+  --navy-mid: #0d3060;
+
+  /* Semantic surface colors */
+  --bg-page: #ffffff;
+  --bg-section-alt: #f0f4f8;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f7faff;
+  --bg-input: #ffffff;
+  --bg-hero: #001b38;
+  --bg-footer: #001226;
+
+  /* Semantic text colors */
+  --text-primary: #001b38;
+  --text-secondary: #1a3a5c;
+  --text-muted: #4a6b8a;
+  --text-on-dark: #ffffff;
+  --text-heading: #001b38;
+
+  /* Borders */
+  --border-light: #d0dae8;
+  --border-gold: rgba(184, 150, 12, 0.35);
+
+  /* Cards */
+  --card-border: #d0dae8;
+  --card-shadow: 0 4px 6px -1px rgba(0, 27, 56, 0.07), 0 2px 4px -1px rgba(0, 27, 56, 0.04);
+  --card-shadow-hover: 0 10px 25px -3px rgba(0, 27, 56, 0.12), 0 4px 6px -2px rgba(0, 27, 56, 0.06);
+
+  /* Icon box */
+  --icon-bg: rgba(184, 150, 12, 0.08);
+  --icon-border: rgba(184, 150, 12, 0.15);
+  --icon-bg-hover: #001b38;
+  --icon-border-hover: #001b38;
+  --icon-color: #b8960c;
+  --icon-color-hover: #ffffff;
+
+  /* Navbar */
+  --nav-bg: transparent;
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.85);
+  --nav-text: #001b38;
+  --nav-border: rgba(0, 27, 56, 0.1);
+
+  /* Form */
+  --input-bg: #ffffff;
+  --input-border: #c0cfe0;
+  --input-text: #001b38;
+  --input-placeholder: #7a99b8;
+
+  /* Scrollbar */
+  --scrollbar-track: #edf2f7;
+  --scrollbar-thumb: #001b38;
+
+  /* Tags */
+  --tag-bg: rgba(184, 150, 12, 0.08);
+  --tag-border: rgba(184, 150, 12, 0.2);
+  --tag-text: #7a6005;
+
+  /* Misc */
+  --overlay-light: rgba(255, 255, 255, 0.06);
+  --section-line: rgba(0, 27, 56, 0.12);
+  --gold-glow: rgba(184, 150, 12, 0.25);
+  --stat-card-bg: #ffffff;
+  --stat-card-border: #d0dae8;
+
+  /* Tailwind compatibility */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.12 0.04 240);
+  --card: oklch(0.99 0 0);
+  --card-foreground: oklch(0.12 0.04 240);
+  --primary: oklch(0.15 0.06 240);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.22 0.06 240);
+  --secondary-foreground: oklch(0.99 0 0);
+  --muted: oklch(0.94 0.01 240);
+  --muted-foreground: oklch(0.5 0.03 240);
+  --accent: oklch(0.65 0.12 80);
+  --accent-foreground: oklch(0.12 0.04 240);
+  --border: oklch(0.88 0.02 240);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  * {
+    border-color: var(--color-border);
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Alexandria', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alexandria', sans-serif;
+    color: var(--text-heading);
+  }
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.font-cairo {
+  font-family: 'Alexandria', sans-serif;
+}
+
+/* ============================================
+   CUSTOM UTILITIES
+   ============================================ */
+.text-gold {
+  color: var(--gold);
+}
+
+.text-gold-light {
+  color: var(--gold-light);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
+.gradient-text {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   GLASS / CARD
+   ============================================ */
+.glass {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--card-shadow);
+}
+
+.glass-light {
+  background: var(--bg-section-alt);
+  border: 1px solid var(--border-light);
+}
+
+/* ============================================
+   GOLD DIVIDER
+   ============================================ */
+.divider-gold {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.divider-gold-right {
+  width: 60px;
+  height: 4px;
+  background: var(--gold);
+  margin-inline-start: 0;
+  border-radius: 2px;
+}
+
+/* ============================================
+   SECTION HEADER
+   ============================================ */
+.section-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-family: 'Alexandria', sans-serif;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2.5rem;
+  background: var(--navy);
+  color: #ffffff;
+  font-family: 'Alexandria', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--navy);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--gold-glow);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2.5rem;
+  background: transparent;
+  color: var(--navy);
+  font-family: 'Alexandria', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 2px solid var(--navy);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: var(--navy);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.card-industrial {
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.card-industrial:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* ============================================
+   SERVICE ICON BOX
+   ============================================ */
+.icon-box {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--icon-bg);
+  border: 1px solid var(--icon-border);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--icon-color);
+  transition: all 0.3s ease;
+  margin: 0 auto 1.5rem auto;
+}
+
+.card-industrial:hover .icon-box {
+  background: var(--icon-bg-hover);
+  color: var(--icon-color-hover);
+  border-color: var(--icon-bg-hover);
+  transform: scale(1.1);
+}
+
+/* ============================================
+   STATS COUNTER
+   ============================================ */
+.stat-number {
+  font-family: 'Alexandria', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar-scrolled {
+  background: var(--nav-bg-scrolled) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 2px 24px rgba(0, 27, 56, 0.08) !important;
+  border-bottom: 1px solid var(--nav-border) !important;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero-overlay {
+  background: var(--bg-hero);
+}
+
+.hero-bg {
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (max-width: 1024px) {
+  .hero-bg {
+    inset: 0 !important;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-bg {
+    inset: 0 !important;
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Delay utilities */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[dir="rtl"] .reveal-left {
+  transform: translateX(30px);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[dir="rtl"] .reveal-right {
+  transform: translateX(-30px);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   PROJECT CARD HOVER
+   ============================================ */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+}
+
+.project-card img {
+  transition: transform 0.6s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 27, 56, 0.9) 0%, rgba(0, 27, 56, 0.4) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+.form-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--input-bg);
+  border: 1.5px solid var(--input-border);
+  border-radius: 8px;
+  color: var(--input-text);
+  font-family: 'Alexandria', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(0, 27, 56, 0.1);
+}
+
+.form-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+/* ============================================
+   NAV LINK
+   ============================================ */
+.nav-link {
+  position: relative;
+  font-weight: 600;
+  font-family: 'Alexandria', sans-serif;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  padding-bottom: 4px;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--gold) !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   SECTION DIVIDER LINE
+   ============================================ */
+.section-line {
+  position: relative;
+}
+
+.section-line::before {
+  content: '';
+  position: absolute;
+  inset-inline-end: 0;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(to inline-start, transparent, var(--section-line));
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* ============================================
+   COUNTER SEPARATOR
+   ============================================ */
+.counter-divider {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--section-line), transparent);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer-link {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--gold);
+  transform: translateX(-4px);
+}
+
+[dir="ltr"] .footer-link:hover {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   THEME TOGGLE → becomes only Language Toggle
+   ============================================ */
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--icon-bg);
+  border: 1px solid var(--icon-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+  transform: scale(1.05);
+}
+
+/* ============================================
+   MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }

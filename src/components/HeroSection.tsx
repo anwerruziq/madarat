@@ -216,7 +216,7 @@ export function HeroSection() {
             <a href="#contact" className="btn-primary" style={{ padding: "0.6rem 1.4rem", fontSize: "0.95rem", background: "#ffffff", color: "var(--navy)", borderColor: "#ffffff", borderRadius: "8px", fontWeight: "700" }}>
               {t.hero.cta1}
             </a>
-            <a href="#services" className="btn-outline" style={{ padding: "0.6rem 1.4rem", fontSize: "0.95rem", color: "#ffffff", borderColor: "#ffffff", borderRadius: "8px", fontWeight: "700", background: "rgba(0,0,0,0.4)" }}>
+            <a href="#projects" className="btn-outline" style={{ padding: "0.6rem 1.4rem", fontSize: "0.95rem", color: "#ffffff", borderColor: "#ffffff", borderRadius: "8px", fontWeight: "700", background: "rgba(0,0,0,0.4)" }}>
               {t.hero.cta2}
             </a>
           </div>

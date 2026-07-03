@@ -20,7 +20,7 @@ export const translations = {
       subtitle: "",
       desc: "نقدم حلول تصنيع متكاملة للهياكل المعدنية والمقطورات والمعدات الصناعية باحترافية وجودة عالية",
       cta1: "تواصل معنا",
-      cta2: "اكتشف خدماتنا",
+      cta2: "اكتشف منتجاتنا",
     },
     // About
     about: {
@@ -171,7 +171,7 @@ export const translations = {
       subtitle: "",
       desc: "Providing integrated manufacturing solutions for metal structures, trailers, and industrial equipment with high quality and professionalism",
       cta1: "Contact Us",
-      cta2: "Explore Services",
+      cta2: "Explore Our Products",
     },
     // About
     about: {

@@ -64,7 +64,7 @@ export function ContactSection() {
               fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
               fontWeight: "700",
               color: "var(--text-heading)",
-              fontFamily: "Alexandria, sans-serif",
+              fontFamily: "IBM Plex Sans Arabic, sans-serif",
               marginBottom: "1rem",
             }}
           >
@@ -87,7 +87,7 @@ export function ContactSection() {
           <div className="reveal-up">
             <h3
               style={{
-                fontFamily: "Alexandria, sans-serif",
+                fontFamily: "IBM Plex Sans Arabic, sans-serif",
                 fontWeight: "700",
                 color: "var(--text-heading)",
                 fontSize: "1.25rem",

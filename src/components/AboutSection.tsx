@@ -152,7 +152,7 @@ export function AboutSection() {
               >
                 <i className="bx bx-buildings"></i>
               </div>
-              <h3 style={{ fontSize: "1.8rem", color: "var(--text-heading)", fontWeight: "700", marginBottom: "0.5rem", fontFamily: "Alexandria, sans-serif" }}>
+              <h3 style={{ fontSize: "1.8rem", color: "var(--text-heading)", fontWeight: "700", marginBottom: "0.5rem", fontFamily: "IBM Plex Sans Arabic, sans-serif" }}>
                 {t.about.foundingStory}
               </h3>
               <p style={{ color: "var(--text-muted)", textAlign: "center", fontSize: "0.95rem" }}>
@@ -186,7 +186,7 @@ export function AboutSection() {
                   color: "var(--text-heading)",
                   fontWeight: "700",
                   marginBottom: "0.75rem",
-                  fontFamily: "Alexandria, sans-serif",
+                  fontFamily: "IBM Plex Sans Arabic, sans-serif",
                   fontSize: "1.1rem",
                 }}
               >

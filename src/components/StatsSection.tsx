@@ -74,7 +74,7 @@ export function StatsSection() {
               fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
               fontWeight: "700",
               color: "var(--text-heading)",
-              fontFamily: "Alexandria, sans-serif",
+              fontFamily: "IBM Plex Sans Arabic, sans-serif",
             }}
           >
             {t.stats.title}{" "}
@@ -180,7 +180,7 @@ function StatCard({
       </div>
 
       {/* Number */}
-      <div className="stat-number" style={{ marginBottom: "0.5rem", color: "var(--text-heading)", fontWeight: "800", fontSize: "3rem", fontFamily: "Alexandria, sans-serif" }}>
+      <div className="stat-number" style={{ marginBottom: "0.5rem", color: "var(--text-heading)", fontWeight: "800", fontSize: "3rem", fontFamily: "IBM Plex Sans Arabic, sans-serif" }}>
         {count}
         <span style={{ fontSize: "2rem", color: "var(--gold)" }}>{suffix}</span>
       </div>
@@ -188,7 +188,7 @@ function StatCard({
       {/* Label */}
       <div
         style={{
-          fontFamily: "Alexandria, sans-serif",
+          fontFamily: "IBM Plex Sans Arabic, sans-serif",
           fontWeight: "700",
           color: "var(--text-heading)",
           fontSize: "1.2rem",

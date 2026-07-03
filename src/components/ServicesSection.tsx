@@ -52,7 +52,7 @@ export function ServicesSection() {
               fontWeight: "700",
               color: "var(--text-heading)",
               marginBottom: "1rem",
-              fontFamily: "Alexandria, sans-serif"
+              fontFamily: "IBM Plex Sans Arabic, sans-serif"
             }}
           >
             {t.services.title}{" "}
@@ -99,7 +99,7 @@ export function ServicesSection() {
                     style={{
                       color: "var(--text-heading)",
                       fontWeight: "700",
-                      fontFamily: "Alexandria, sans-serif",
+                      fontFamily: "IBM Plex Sans Arabic, sans-serif",
                       fontSize: "1.2rem",
                       lineHeight: "1.4",
                     }}

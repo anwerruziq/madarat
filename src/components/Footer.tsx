@@ -51,10 +51,10 @@ export function Footer() {
                 style={{ width: "64px", height: "64px", borderRadius: "10px", objectFit: "contain" }}
               />
               <div>
-                <div style={{ color: "var(--gold)", fontWeight: "700", fontSize: "1.1rem", fontFamily: "Alexandria, sans-serif" }}>
+                <div style={{ color: "var(--gold)", fontWeight: "700", fontSize: "1.1rem", fontFamily: "IBM Plex Sans Arabic, sans-serif" }}>
                   مدارات التنفيذ
                 </div>
-                <div style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.6rem", letterSpacing: "0.12em", fontFamily: "Alexandria, sans-serif" }}>
+                <div style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.6rem", letterSpacing: "0.12em", fontFamily: "IBM Plex Sans Arabic, sans-serif" }}>
                   CONSULTING GROUP
                 </div>
               </div>
@@ -203,7 +203,7 @@ export function Footer() {
 const headingStyle: React.CSSProperties = {
   color: "#ffffff",
   fontWeight: "700",
-  fontFamily: "Alexandria, sans-serif",
+  fontFamily: "IBM Plex Sans Arabic, sans-serif",
   marginBottom: "1.25rem",
   fontSize: "1rem",
   letterSpacing: "0.02em",
@@ -221,7 +221,7 @@ const contactLabelStyle: React.CSSProperties = {
   fontSize: "0.78rem",
   fontWeight: "600",
   color: "var(--gold)",
-  fontFamily: "Alexandria, sans-serif",
+  fontFamily: "IBM Plex Sans Arabic, sans-serif",
   marginBottom: "0.35rem",
   letterSpacing: "0.02em",
 };
@@ -229,7 +229,7 @@ const contactLabelStyle: React.CSSProperties = {
 const contactValueStyle: React.CSSProperties = {
   color: "rgba(255,255,255,0.72)",
   fontSize: "0.82rem",
-  fontFamily: "Alexandria, sans-serif",
+  fontFamily: "IBM Plex Sans Arabic, sans-serif",
   lineHeight: "1.75",
   margin: 0,
   paddingInlineStart: "1.5rem",
@@ -239,7 +239,7 @@ const contactLinkStyle: React.CSSProperties = {
   display: "block",
   color: "rgba(255,255,255,0.72)",
   fontSize: "0.82rem",
-  fontFamily: "Alexandria, sans-serif",
+  fontFamily: "IBM Plex Sans Arabic, sans-serif",
   textDecoration: "none",
   paddingInlineStart: "1.5rem",
   lineHeight: "1.75",
@@ -250,7 +250,7 @@ const linkStyle: React.CSSProperties = {
   color: "rgba(255,255,255,0.65)",
   textDecoration: "none",
   fontSize: "0.875rem",
-  fontFamily: "Alexandria, sans-serif",
+  fontFamily: "IBM Plex Sans Arabic, sans-serif",
   display: "flex",
   alignItems: "center",
   gap: "0.3rem",
@@ -308,7 +308,7 @@ function ContactItem({
           style={{
             fontSize: "0.68rem",
             color: "rgba(255,255,255,0.38)",
-            fontFamily: "Alexandria, sans-serif",
+            fontFamily: "IBM Plex Sans Arabic, sans-serif",
             marginBottom: "0.2rem",
             letterSpacing: "0.04em",
           }}
@@ -319,7 +319,7 @@ function ContactItem({
           style={{
             fontSize: "0.82rem",
             color: "rgba(255,255,255,0.82)",
-            fontFamily: "Alexandria, sans-serif",
+            fontFamily: "IBM Plex Sans Arabic, sans-serif",
             lineHeight: "1.65",
           }}
         >

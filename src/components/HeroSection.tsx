@@ -176,7 +176,7 @@ export function HeroSection() {
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
               fontWeight: "500",
               marginBottom: "0.5rem",
-              fontFamily: "Alexandria, sans-serif",
+              fontFamily: "IBM Plex Sans Arabic, sans-serif",
             }}
           >
             {t.hero.subtitle}
@@ -189,7 +189,7 @@ export function HeroSection() {
               fontWeight: "800",
               marginBottom: "1.5rem",
               lineHeight: "1.2",
-              fontFamily: "Alexandria, sans-serif",
+              fontFamily: "IBM Plex Sans Arabic, sans-serif",
             }}
           >
             {t.hero.title}

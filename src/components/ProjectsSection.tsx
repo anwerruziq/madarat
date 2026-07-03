@@ -59,7 +59,7 @@ export function ProjectsSection() {
               fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
               fontWeight: "700",
               color: "var(--text-heading)",
-              fontFamily: "Alexandria, sans-serif",
+              fontFamily: "IBM Plex Sans Arabic, sans-serif",
               marginBottom: "1rem",
             }}
           >
@@ -162,7 +162,7 @@ export function ProjectsSection() {
                   style={{
                     color: "var(--text-heading)",
                     fontWeight: "600",
-                    fontFamily: "Alexandria, sans-serif",
+                    fontFamily: "IBM Plex Sans Arabic, sans-serif",
                     fontSize: "1.1rem",
                     lineHeight: "1.4",
                     margin: "0 0 0.5rem",
@@ -176,7 +176,7 @@ export function ProjectsSection() {
                     fontSize: "0.85rem",
                     lineHeight: "1.6",
                     margin: 0,
-                    fontFamily: "Alexandria, sans-serif",
+                    fontFamily: "IBM Plex Sans Arabic, sans-serif",
                     display: "-webkit-box",
                     WebkitLineClamp: 2,
                     WebkitBoxOrient: "vertical",
@@ -192,7 +192,7 @@ export function ProjectsSection() {
 
         {/* CTA */}
         <div className="reveal" style={{ textAlign: "center", marginTop: "3.5rem" }}>
-          <p style={{ color: "var(--text-secondary)", marginBottom: "1.25rem", fontSize: "0.95rem", fontFamily: "Alexandria, sans-serif" }}>
+          <p style={{ color: "var(--text-secondary)", marginBottom: "1.25rem", fontSize: "0.95rem", fontFamily: "IBM Plex Sans Arabic, sans-serif" }}>
             {t.projects.ctaText}
           </p>
           <a href="#contact" className="btn-outline">

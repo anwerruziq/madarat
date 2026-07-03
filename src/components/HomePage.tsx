@@ -39,7 +39,7 @@ function HomePageInner() {
         backgroundColor: "var(--bg-page)",
         minHeight: "100vh",
         overflowX: "hidden",
-        fontFamily: "'Alexandria', sans-serif",
+        fontFamily: "'IBM Plex Sans Arabic', sans-serif",
       }}
     >
       <Navbar />

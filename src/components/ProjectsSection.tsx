@@ -98,13 +98,10 @@ export function ProjectsSection() {
                 overflow: "hidden",
                 background: "var(--bg-card)",
                 boxShadow: "0 8px 32px rgba(0, 27, 56, 0.12), 0 2px 8px rgba(0, 27, 56, 0.08)",
-                transition: "transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease",
+                transition: "opacity 0.6s ease-out, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease",
                 cursor: "pointer",
-                position: "relative",
-                aspectRatio: "16 / 9",
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "flex-end",
               }}
               onClick={() => setSelectedImage(BG_IMAGE)}
               onMouseEnter={(e) => {
@@ -114,7 +111,7 @@ export function ProjectsSection() {
                 const img = e.currentTarget.querySelector("img");
                 if (img) {
                   img.style.transform = "scale(1.06)";
-                  img.style.filter = "grayscale(0%) brightness(1.05)";
+                  img.style.filter = "brightness(1.05)";
                 }
               }}
               onMouseLeave={(e) => {
@@ -124,16 +121,16 @@ export function ProjectsSection() {
                 const img = e.currentTarget.querySelector("img");
                 if (img) {
                   img.style.transform = "scale(1)";
-                  img.style.filter = "grayscale(100%) brightness(0.9)";
+                  img.style.filter = "brightness(0.9)";
                 }
               }}
             >
-              {/* Background Image */}
+              {/* Image Container */}
               <div
                 style={{
-                  position: "absolute",
-                  inset: 0,
-                  zIndex: 0,
+                  position: "relative",
+                  width: "100%",
+                  aspectRatio: "16 / 9",
                   overflow: "hidden",
                 }}
               >
@@ -147,49 +144,41 @@ export function ProjectsSection() {
                     objectPosition: "center",
                     transition: "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s ease",
                     display: "block",
-                    filter: "grayscale(100%) brightness(0.9)",
-                  }}
-                />
-                {/* Dark gradient overlay */}
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(to top, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.6) 40%, rgba(0,0,0,0) 80%)",
+                    filter: "brightness(0.9)",
                   }}
                 />
               </div>
 
-              {/* Content at the bottom */}
+              {/* Content below the image */}
               <div 
                 style={{ 
-                  position: "relative", 
-                  zIndex: 1,
-                  padding: "1.5rem 1.5rem",
+                  padding: "1.5rem",
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
                 <h3
                   style={{
-                    color: "#ffffff",
+                    color: "var(--text-heading)",
                     fontWeight: "600",
                     fontFamily: "Alexandria, sans-serif",
                     fontSize: "1.1rem",
                     lineHeight: "1.4",
-                    margin: "0 0 0.4rem",
+                    margin: "0 0 0.5rem",
                   }}
                 >
                   {product.title}
                 </h3>
                 <p
                   style={{
-                    color: "rgba(255, 255, 255, 0.75)",
-                    fontSize: "0.8rem",
+                    color: "var(--text-secondary)",
+                    fontSize: "0.85rem",
                     lineHeight: "1.6",
                     margin: 0,
                     fontFamily: "Alexandria, sans-serif",
                     display: "-webkit-box",
-                    WebkitLineClamp: 3,
+                    WebkitLineClamp: 2,
                     WebkitBoxOrient: "vertical",
                     overflow: "hidden",
                   }}

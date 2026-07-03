@@ -80,9 +80,8 @@ export const translations = {
       title: "أرقام تتحدث",
       titleHighlight: "عن نجاحنا",
       items: [
-        { label: "سنة من الخبرة", desc: "خبرة متراكمة في القطاع المالي" },
+        { label: "سنوات من الخبرة", desc: "خبرة متراكمة في التصنيع الصناعي" },
         { label: "عميل راضٍ", desc: "مؤسسات وشركات نثق بها" },
-        { label: "خبير مالي", desc: "فريق من الخبراء المعتمدين" },
         { label: "دقة وشفافية", desc: "نلتزم بأعلى المعايير المهنية" },
       ],
     },
@@ -232,9 +231,8 @@ export const translations = {
       title: "Numbers That Speak",
       titleHighlight: "For Our Success",
       items: [
-        { label: "Years of Experience", desc: "Accumulated expertise in the financial sector" },
+        { label: "Years of Experience", desc: "Accumulated expertise in industrial manufacturing" },
         { label: "Satisfied Clients", desc: "Institutions and companies we trust" },
-        { label: "Financial Experts", desc: "A team of certified experts" },
         { label: "Accuracy & Transparency", desc: "We adhere to the highest professional standards" },
       ],
     },

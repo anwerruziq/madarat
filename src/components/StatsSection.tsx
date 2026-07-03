@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { useLang } from "@/context/LanguageContext";
 
-const statValues = [15, 400, 50, 100];
-const statSuffixes = ["+", "+", "+", "%"];
+const statValues = [4, 400, 100];
+const statSuffixes = ["+", "+", "%"];
 const statIcons = [
   <i className="bx bx-calendar"></i>,
   <i className="bx bx-buildings"></i>,
-  <i className="bx bx-user-check"></i>,
   <i className="bx bx-check-shield"></i>,
 ];
 

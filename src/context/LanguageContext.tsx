@@ -17,8 +17,8 @@ export const translations = {
     // Hero
     hero: {
       title: "مدارات التنفيذ",
-      subtitle: "شركة صناعية ومقاولات عامة",
-      desc: "نقدم حلول متكاملة تشمل التصنيع، الإنشاءات، التوريد، والتنفيذ باحترافية وجودة عالية",
+      subtitle: "شركة صناعية متخصصة في التصنيع",
+      desc: "نقدم حلول تصنيع متكاملة للهياكل المعدنية والمقطورات والمعدات الصناعية باحترافية وجودة عالية",
       cta1: "تواصل معنا",
       cta2: "اكتشف خدماتنا",
     },
@@ -27,10 +27,10 @@ export const translations = {
       label: "من نحن",
       title: "نبذة عامة عن",
       titleHighlight: "مدارات التنفيذ",
-      p1: "مدارات التنفيذ شركة متخصصة في الأعمال الصناعية والمقاولات العامة، تقدم حلول متكاملة تشمل التصنيع، الإنشاءات، التوريد، والتنفيذ باحترافية وجودة عالية، مع الالتزام بمعايير السلامة والكفاءة التشغيلية.",
-      p2: "تأسست الشركة انطلاقاً من رؤية طموحة لتقديم خدمات صناعية ومقاولات عالية الجودة تلبي احتياجات السوق المحلي وتواكب التطور المتسارع في قطاع الأعمال بالمملكة العربية السعودية، للمساهمة في تحقيق رؤية المملكة 2030.",
+      p1: "مدارات التنفيذ شركة متخصصة في التصنيع الصناعي، تقدم حلول متكاملة لتصنيع الهياكل المعدنية والمقطورات والمعدات الصناعية باحترافية وجودة عالية، مع الالتزام بمعايير السلامة والكفاءة التشغيلية.",
+      p2: "تأسست الشركة انطلاقاً من رؤية طموحة لتقديم خدمات تصنيع صناعية عالية الجودة تلبي احتياجات السوق المحلي وتواكب التطور المتسارع في قطاع الأعمال بالمملكة العربية السعودية، للمساهمة في تحقيق رؤية المملكة 2030.",
       facts: [
-        { label: "النشاط", value: "صناعية ومقاولات" },
+        { label: "النشاط", value: "تصنيع صناعي" },
         { label: "المقر الرئيسي", value: "الرياض - حي السلي" },
         { label: "سنة التأسيس", value: "2022" },
         { label: "خبرة الشركة", value: "5 سنوات" },
@@ -38,8 +38,8 @@ export const translations = {
       foundingStory: "قصة التأسيس",
       foundingDesc: "بدأت الشركة بخبرة عملية وفهم عميق لمتطلبات العملاء مع التركيز على الجودة والالتزام والموثوقية في تنفيذ المشاريع.",
       values: [
-        { title: "الرؤية", desc: "أن نكون من الشركات الرائدة في قطاع الصناعة والمقاولات من خلال تقديم حلول مبتكرة وجودة عالية تسهم في التنمية المستدامة." },
-        { title: "الرسالة", desc: "تقديم خدمات صناعية ومقاولات متكاملة بمعايير احترافية عالية تواكب تطور السوق وتلبي احتياجات العملاء بكفاءة وموثوقية." },
+        { title: "الرؤية", desc: "أن نكون من الشركات الرائدة في قطاع التصنيع الصناعي من خلال تقديم حلول مبتكرة وجودة عالية تسهم في التنمية المستدامة." },
+        { title: "الرسالة", desc: "تقديم خدمات تصنيع صناعية متكاملة بمعايير احترافية عالية تواكب تطور السوق وتلبي احتياجات العملاء بكفاءة وموثوقية." },
         { title: "الجودة والسلامة", desc: "الالتزام بأعلى معايير الجودة والسلامة في جميع مراحل العمل من التصنيع وحتى التسليم." },
         { title: "السرعة والكفاءة", desc: "سرعة الإنجاز والالتزام بالمواعيد، بفضل فريق عمل مؤهل وخبرة عملية، ومرونة في تلبية الاحتياجات." },
       ],
@@ -135,7 +135,6 @@ export const translations = {
         { title: "المقر الرئيسي", lines: ["طريق الملك فهد، الرياض", "المملكة العربية السعودية"] },
         { title: "اتصل بنا", lines: ["+966 11 XXX XXXX", "+966 50 XXX XXXX"] },
         { title: "البريد الإلكتروني", lines: ["info@madarat-ex.com", "consulting@madarat-ex.com"] },
-        { title: "ساعات العمل", lines: ["الأحد — الخميس", "08:00 صباحاً — 05:00 مساءً"] },
       ],
     },
     // Footer
@@ -170,8 +169,8 @@ export const translations = {
     // Hero
     hero: {
       title: "Madarat Al-Tanfeedh",
-      subtitle: "Industrial & General Contracting Company",
-      desc: "Providing integrated solutions including manufacturing, construction, and supply with high quality and professionalism",
+      subtitle: "Industrial Manufacturing Company",
+      desc: "Providing integrated manufacturing solutions for metal structures, trailers, and industrial equipment with high quality and professionalism",
       cta1: "Contact Us",
       cta2: "Explore Services",
     },
@@ -180,10 +179,10 @@ export const translations = {
       label: "About Us",
       title: "Overview of",
       titleHighlight: "Madarat Al-Tanfeedh",
-      p1: "Madarat Al-Tanfeedh is a specialized company in industrial works and general contracting, offering integrated solutions including manufacturing, construction, supply, and execution with professionalism and high quality, adhering to safety and operational efficiency standards.",
-      p2: "The company was founded with an ambitious vision to provide high-quality industrial and contracting services that meet local market needs and keep pace with the rapid development in the Saudi business sector, contributing to the realization of Vision 2030.",
+      p1: "Madarat Al-Tanfeedh is a specialized industrial manufacturing company, offering integrated solutions for manufacturing metal structures, trailers, and industrial equipment with professionalism and high quality, adhering to safety and operational efficiency standards.",
+      p2: "The company was founded with an ambitious vision to provide high-quality industrial manufacturing services that meet local market needs and keep pace with the rapid development in the Saudi business sector, contributing to the realization of Vision 2030.",
       facts: [
-        { label: "Activity", value: "Industrial & Contracting" },
+        { label: "Activity", value: "Industrial Manufacturing" },
         { label: "Headquarters", value: "Riyadh - Al-Saly District" },
         { label: "Founded", value: "2022" },
         { label: "Experience", value: "5 Years" },
@@ -191,8 +190,8 @@ export const translations = {
       foundingStory: "Founding Story",
       foundingDesc: "The company started with practical experience and deep understanding of client requirements with a focus on quality, commitment, and reliability in project execution.",
       values: [
-        { title: "Vision", desc: "To become one of the leading companies in the industrial and contracting sector by providing innovative solutions and high quality contributing to sustainable development." },
-        { title: "Mission", desc: "Providing integrated industrial and contracting services with high professional standards that keep pace with market evolution and meet client needs efficiently and reliably." },
+        { title: "Vision", desc: "To become one of the leading companies in the industrial manufacturing sector by providing innovative solutions and high quality contributing to sustainable development." },
+        { title: "Mission", desc: "Providing integrated industrial manufacturing services with high professional standards that keep pace with market evolution and meet client needs efficiently and reliably." },
         { title: "Quality & Safety", desc: "Adhering to the highest quality and safety standards throughout all stages of work from manufacturing to delivery." },
         { title: "Speed & Efficiency", desc: "Rapid accomplishment and commitment to deadlines, thanks to a qualified team with practical experience and flexibility in meeting needs." },
       ],
@@ -288,7 +287,6 @@ export const translations = {
         { title: "Headquarters", lines: ["King Fahd Road, Riyadh", "Kingdom of Saudi Arabia"] },
         { title: "Call Us", lines: ["+966 11 XXX XXXX", "+966 50 XXX XXXX"] },
         { title: "Email", lines: ["info@madarat-ex.com", "consulting@madarat-ex.com"] },
-        { title: "Working Hours", lines: ["Sunday — Thursday", "08:00 AM — 05:00 PM"] },
       ],
     },
     // Footer

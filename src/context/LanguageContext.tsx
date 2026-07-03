@@ -17,7 +17,7 @@ export const translations = {
     // Hero
     hero: {
       title: "مدارات التنفيذ",
-      subtitle: "شركة صناعية متخصصة في التصنيع",
+      subtitle: "",
       desc: "نقدم حلول تصنيع متكاملة للهياكل المعدنية والمقطورات والمعدات الصناعية باحترافية وجودة عالية",
       cta1: "تواصل معنا",
       cta2: "اكتشف خدماتنا",
@@ -90,7 +90,7 @@ export const translations = {
     projects: {
       label: "منتجاتنا",
       title: "اكتشف",
-      titleHighlight: "منتجاتنا الصناعية",
+      titleHighlight: "منتجاتنا",
       desc: "نقدم مجموعة متكاملة من المنتجات الصناعية عالية الجودة المصنّعة وفق أعلى المواصفات لتلبية احتياجات قطاع النقل والبناء.",
       ctaText: "هل تبحث عن منتج محدد أو تريد طلب كمية؟",
       ctaBtn: "تواصل معنا للحصول على عرض سعر",
@@ -169,7 +169,7 @@ export const translations = {
     // Hero
     hero: {
       title: "Madarat Al-Tanfeedh",
-      subtitle: "Industrial Manufacturing Company",
+      subtitle: "",
       desc: "Providing integrated manufacturing solutions for metal structures, trailers, and industrial equipment with high quality and professionalism",
       cta1: "Contact Us",
       cta2: "Explore Services",
@@ -242,7 +242,7 @@ export const translations = {
     projects: {
       label: "Our Products",
       title: "Discover Our",
-      titleHighlight: "Industrial Products",
+      titleHighlight: "Our Products",
       desc: "We offer a full range of high-quality industrial products manufactured to the highest specifications, meeting the demands of the transportation and construction sectors.",
       ctaText: "Looking for a specific product or need to place a bulk order?",
       ctaBtn: "Contact us for a price quote",

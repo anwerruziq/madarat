@@ -18,12 +18,19 @@ export function Footer() {
   return (
     <footer
       style={{
-        background: "var(--bg-footer)",
+        background: "url('/file_00000000cb7871f8ac48fa1a98f532a5.png') center/cover no-repeat",
+        position: "relative",
         borderTop: "1px solid rgba(255,255,255,0.06)",
         paddingTop: "4rem",
       }}
     >
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        background: "rgba(15, 23, 42, 0.94)", // very dark overlay to keep text readable
+        zIndex: 0
+      }} />
+      <div style={{ position: "relative", zIndex: 1, maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
 
         {/* Main Footer Grid — 4 columns */}
         <div

@@ -3,7 +3,7 @@ import { useLang } from "@/context/LanguageContext";
 
 export function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   useEffect(() => {
     const hero = heroRef.current;
@@ -117,6 +117,7 @@ export function HeroSection() {
 
         {/* Animated Background Wrapper for Video and Overlay */}
         <div
+          key={lang}
           className="hero-video-animate-in"
           style={{
             position: "absolute",

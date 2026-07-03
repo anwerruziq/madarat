@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLang } from "@/context/LanguageContext";
 
 const BG_IMAGE = "/file_00000000cb7871f8ac48fa1a98f532a5.png";
@@ -7,6 +7,7 @@ export function ProjectsSection() {
   const ref = useRef<HTMLDivElement>(null);
   const { t, lang } = useLang();
   const products = t.projects.items;
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -93,29 +94,46 @@ export function ProjectsSection() {
               className="reveal"
               style={{
                 transitionDelay: `${i * 0.07}s`,
-                borderRadius: "16px",
+                borderRadius: "20px",
                 overflow: "hidden",
                 background: "var(--bg-card)",
                 boxShadow: "0 8px 32px rgba(0, 27, 56, 0.12), 0 2px 8px rgba(0, 27, 56, 0.08)",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                transition: "transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease",
                 cursor: "pointer",
+                position: "relative",
+                aspectRatio: "16 / 9",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
               }}
+              onClick={() => setSelectedImage(BG_IMAGE)}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)";
+                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-8px)";
                 (e.currentTarget as HTMLDivElement).style.boxShadow =
-                  "0 20px 48px rgba(0, 27, 56, 0.18), 0 4px 12px rgba(184,150,12,0.15)";
+                  "0 24px 56px rgba(0, 27, 56, 0.2), 0 8px 24px rgba(0, 0, 0, 0.15)";
+                const img = e.currentTarget.querySelector("img");
+                if (img) {
+                  img.style.transform = "scale(1.06)";
+                  img.style.filter = "grayscale(0%) brightness(1.05)";
+                }
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
                 (e.currentTarget as HTMLDivElement).style.boxShadow =
                   "0 8px 32px rgba(0, 27, 56, 0.12), 0 2px 8px rgba(0, 27, 56, 0.08)";
+                const img = e.currentTarget.querySelector("img");
+                if (img) {
+                  img.style.transform = "scale(1)";
+                  img.style.filter = "grayscale(100%) brightness(0.9)";
+                }
               }}
             >
-              {/* Image with angled title overlay */}
+              {/* Background Image */}
               <div
                 style={{
-                  height: "200px",
-                  position: "relative",
+                  position: "absolute",
+                  inset: 0,
+                  zIndex: 0,
                   overflow: "hidden",
                 }}
               >
@@ -127,115 +145,57 @@ export function ProjectsSection() {
                     height: "100%",
                     objectFit: "cover",
                     objectPosition: "center",
-                    transition: "transform 0.5s ease",
+                    transition: "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s ease",
                     display: "block",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLImageElement).style.transform = "scale(1.08)";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLImageElement).style.transform = "scale(1)";
+                    filter: "grayscale(100%) brightness(0.9)",
                   }}
                 />
-
                 {/* Dark gradient overlay */}
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
                     background:
-                      "linear-gradient(to top, rgba(0,10,25,0.85) 0%, rgba(0,10,25,0.3) 50%, rgba(0,0,0,0) 100%)",
+                      "linear-gradient(to top, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.6) 40%, rgba(0,0,0,0) 80%)",
                   }}
                 />
-
-                {/* Category badge */}
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "12px",
-                    ...(lang === "ar" ? { right: "12px" } : { left: "12px" }),
-                    background: "var(--gold)",
-                    color: "#fff",
-                    fontSize: "0.7rem",
-                    fontWeight: "700",
-                    fontFamily: "Alexandria, sans-serif",
-                    padding: "0.25rem 0.7rem",
-                    borderRadius: "20px",
-                    letterSpacing: "0.04em",
-                    textTransform: "uppercase",
-                    boxShadow: "0 2px 8px rgba(184,150,12,0.4)",
-                  }}
-                >
-                  {product.category}
-                </div>
-
-                {/* Angled title on image */}
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    padding: "1rem 1.25rem 1rem",
-                    transform: "skewY(-1.5deg)",
-                    transformOrigin: "bottom left",
-                  }}
-                >
-                  <h3
-                    style={{
-                      color: "#ffffff",
-                      fontWeight: "800",
-                      fontFamily: "Alexandria, sans-serif",
-                      fontSize: "1.1rem",
-                      lineHeight: "1.3",
-                      margin: 0,
-                      textShadow: "0 2px 12px rgba(0,0,0,0.6)",
-                      transform: "skewY(1.5deg)",
-                    }}
-                  >
-                    {product.title}
-                  </h3>
-                </div>
               </div>
 
-              {/* Product description */}
-              <div style={{ padding: "1.25rem 1.5rem 1.5rem" }}>
+              {/* Content at the bottom */}
+              <div 
+                style={{ 
+                  position: "relative", 
+                  zIndex: 1,
+                  padding: "1.5rem 1.5rem",
+                }}
+              >
+                <h3
+                  style={{
+                    color: "#ffffff",
+                    fontWeight: "600",
+                    fontFamily: "Alexandria, sans-serif",
+                    fontSize: "1.1rem",
+                    lineHeight: "1.4",
+                    margin: "0 0 0.4rem",
+                  }}
+                >
+                  {product.title}
+                </h3>
                 <p
                   style={{
-                    color: "var(--text-secondary)",
-                    fontSize: "0.875rem",
-                    lineHeight: "1.85",
-                    margin: "0 0 1rem",
+                    color: "rgba(255, 255, 255, 0.75)",
+                    fontSize: "0.8rem",
+                    lineHeight: "1.6",
+                    margin: 0,
                     fontFamily: "Alexandria, sans-serif",
                     display: "-webkit-box",
-                    WebkitLineClamp: 2,
+                    WebkitLineClamp: 3,
                     WebkitBoxOrient: "vertical",
                     overflow: "hidden",
                   }}
                 >
                   {product.desc}
                 </p>
-
-                {/* Tags */}
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
-                  {product.tags.map((tag, j) => (
-                    <span
-                      key={j}
-                      style={{
-                        padding: "0.2rem 0.65rem",
-                        background: "var(--bg-section-alt)",
-                        border: "1px solid var(--border-light)",
-                        borderRadius: "20px",
-                        fontSize: "0.72rem",
-                        color: "var(--text-muted)",
-                        fontFamily: "Alexandria, sans-serif",
-                        fontWeight: "500",
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}
@@ -251,6 +211,75 @@ export function ProjectsSection() {
           </a>
         </div>
       </div>
+
+      {/* Image Lightbox Modal */}
+      {selectedImage && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9999,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "rgba(0,0,0,0.85)",
+            backdropFilter: "blur(4px)",
+            animation: "fadeIn 0.3s ease",
+          }}
+          onClick={() => setSelectedImage(null)}
+        >
+          <style>
+            {`
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+              @keyframes zoomIn {
+                from { transform: scale(0.9); opacity: 0; }
+                to { transform: scale(1); opacity: 1; }
+              }
+            `}
+          </style>
+          <div
+            style={{
+              position: "relative",
+              maxWidth: "90vw",
+              maxHeight: "90vh",
+              animation: "zoomIn 0.4s cubic-bezier(0.22, 1, 0.36, 1)",
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedImage(null)}
+              style={{
+                position: "absolute",
+                top: "-40px",
+                right: "0",
+                background: "transparent",
+                border: "none",
+                color: "white",
+                fontSize: "2.5rem",
+                cursor: "pointer",
+                lineHeight: 1,
+              }}
+            >
+              &times;
+            </button>
+            <img
+              src={selectedImage}
+              alt="Enlarged product"
+              style={{
+                width: "100%",
+                height: "auto",
+                maxHeight: "90vh",
+                objectFit: "contain",
+                borderRadius: "12px",
+                boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
+              }}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

@@ -79,7 +79,7 @@ export function ContactSection() {
 
         <div
           style={{
-            maxWidth: "800px",
+            maxWidth: "1000px",
             margin: "0 auto",
           }}
         >
@@ -98,7 +98,7 @@ export function ContactSection() {
               {t.contact.infoTitle}
             </h3>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.25rem", marginBottom: "2.5rem" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1rem", marginBottom: "3rem" }}>
               {t.contact.infoItems.map((info, i) => (
                 <div
                   key={i}
@@ -107,8 +107,8 @@ export function ContactSection() {
                     flexDirection: "column",
                     alignItems: "center",
                     textAlign: "center",
-                    gap: "1rem",
-                    padding: "1.5rem",
+                    gap: "0.75rem",
+                    padding: "1.25rem",
                     background: "var(--bg-card)",
                     border: "1px solid var(--card-border)",
                     borderRadius: "8px",
@@ -121,11 +121,11 @@ export function ContactSection() {
                     (e.currentTarget as HTMLElement).style.borderColor = "var(--card-border)";
                   }}
                 >
-                  <span style={{ fontSize: "2rem", color: "var(--gold)" }}>{contactIcons[i]}</span>
+                  <span style={{ fontSize: "1.75rem", color: "var(--gold)" }}>{contactIcons[i]}</span>
                   <div>
                     <div
                       style={{
-                        fontSize: "1rem",
+                        fontSize: "0.95rem",
                         color: "var(--gold)",
                         fontWeight: "700",
                         marginBottom: "0.5rem",
@@ -134,13 +134,26 @@ export function ContactSection() {
                       {info.title}
                     </div>
                     {info.lines.map((line, j) => (
-                      <div key={j} style={{ color: "var(--text-secondary)", fontSize: "0.95rem" }}>
+                      <div key={j} style={{ color: "var(--text-secondary)", fontSize: "0.85rem" }}>
                         {line}
                       </div>
                     ))}
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Google Maps Location */}
+            <div className="reveal" style={{ width: "100%", height: "400px", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--card-border)", marginBottom: "3rem", boxShadow: "0 10px 30px rgba(0,0,0,0.15)" }}>
+              <iframe
+                src="https://maps.google.com/maps?q=24.6143145,46.8566099&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
             {/* Social Links */}

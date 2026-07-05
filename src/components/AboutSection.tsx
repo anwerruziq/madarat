@@ -45,7 +45,6 @@ export function AboutSection() {
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem", position: "relative" }}>
         {/* Section Header */}
         <div className="reveal" style={{ textAlign: "center", marginBottom: "4rem" }}>
-          <div className="section-label" style={{ marginBottom: "1rem" }}>{t.about.label}</div>
           <h2
             style={{
               fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
@@ -54,8 +53,7 @@ export function AboutSection() {
               marginBottom: "1rem",
             }}
           >
-            {t.about.title}{" "}
-            <span style={{ color: "var(--gold)" }}>{t.about.titleHighlight}</span>
+            {t.about.label}
           </h2>
           <div className="divider-gold" style={{ marginBottom: "1.5rem" }} />
         </div>
@@ -63,140 +61,209 @@ export function AboutSection() {
         {/* Main Content */}
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            display: "flex",
+            flexDirection: "column",
             gap: "4rem",
             alignItems: "center",
             marginBottom: "5rem",
           }}
         >
-          {/* Text Column */}
-          <div className="reveal-left">
-            <p
-              style={{
-                fontSize: "1.05rem",
-                color: "var(--text-secondary)",
-                lineHeight: "2",
-                marginBottom: "1.5rem",
-              }}
-            >
-              <strong style={{ color: "var(--text-heading)" }}>{t.about.titleHighlight}</strong>{" "}
-              {t.about.p1}
-            </p>
-            <p
-              style={{
-                fontSize: "1.05rem",
-                color: "var(--text-secondary)",
-                lineHeight: "2",
-                marginBottom: "2rem",
-              }}
-            >
-              {t.about.p2}
-            </p>
 
-            {/* Key facts */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-              {t.about.facts.map((fact, i) => (
-                <div
-                  key={i}
-                  style={{
-                    padding: "1rem",
-                    background: "var(--bg-card)",
-                    border: "1px solid var(--card-border)",
-                    borderRadius: "8px",
-                  }}
-                >
-                  <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
-                    {fact.label}
-                  </div>
-                  <div style={{ fontWeight: "700", color: "var(--gold)", fontSize: "1rem" }}>
-                    {fact.value}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Visual Column */}
-          <div className="reveal-right" style={{ position: "relative" }}>
-            <div
-              style={{
-                position: "relative",
-                aspectRatio: "1",
-                maxWidth: "420px",
-                margin: "0 auto",
-                background: "var(--bg-card)",
-                borderRadius: "20px",
-                padding: "2rem",
-                boxShadow: "var(--card-shadow-hover)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-                border: "1px solid var(--card-border)",
-              }}
-            >
-              <div
+          {/* Text Column & Facts */}
+          <div className="reveal" style={{ width: "100%", maxWidth: "1000px" }}>
+            <div style={{
+              background: "var(--bg-card)",
+              padding: "clamp(2rem, 5vw, 4rem)",
+              borderRadius: "20px",
+              border: "1px solid var(--card-border)",
+              boxShadow: "var(--card-shadow-hover)",
+              borderInlineStart: "4px solid var(--gold)",
+            }}>
+              <p
                 style={{
-                  width: "120px",
-                  height: "120px",
-                  borderRadius: "50%",
-                  background: "var(--icon-bg)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "3rem",
-                  color: "var(--gold)",
-                  marginBottom: "1.5rem"
+                  fontSize: "1.2rem",
+                  color: "var(--text-heading)",
+                  lineHeight: "1.9",
+                  marginBottom: "1.5rem",
+                  fontWeight: "600",
                 }}
               >
-                <i className="bx bx-buildings"></i>
-              </div>
-              <h3 style={{ fontSize: "1.8rem", color: "var(--text-heading)", fontWeight: "700", marginBottom: "0.5rem", fontFamily: "IBM Plex Sans Arabic, sans-serif" }}>
-                {t.about.foundingStory}
-              </h3>
-              <p style={{ color: "var(--text-muted)", textAlign: "center", fontSize: "0.95rem" }}>
-                {t.about.foundingDesc}
+                {t.about.p1}
               </p>
+              <p
+                style={{
+                  fontSize: "1.05rem",
+                  color: "var(--text-secondary)",
+                  lineHeight: "2",
+                  marginBottom: "3rem",
+                }}
+              >
+                {t.about.p2}
+              </p>
+
+              {/* Key facts */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.5rem" }}>
+                {t.about.facts.map((fact, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.5rem",
+                      padding: "1.5rem",
+                      background: "var(--bg-section-alt)",
+                      border: "1px solid var(--card-border)",
+                      borderRadius: "12px",
+                      transition: "all 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-5px)";
+                      e.currentTarget.style.borderColor = "var(--gold)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.borderColor = "var(--card-border)";
+                    }}
+                  >
+                    <div style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
+                      {fact.label}
+                    </div>
+                    <div style={{ fontWeight: "700", color: "var(--gold)", fontSize: "1.25rem", fontFamily: "IBM Plex Sans Arabic, sans-serif" }}>
+                      {fact.value}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Values Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "1.5rem",
-          }}
-        >
-          {t.about.values.map((value, i) => (
-            <div
-              key={i}
-              className={`card-industrial reveal`}
-              style={{
-                animationDelay: `${i * 0.1}s`,
-              }}
-            >
-              <div className="icon-box">
-                {valueIcons[i]}
-              </div>
+        {/* Vision, Mission & Values Section */}
+        <div className="reveal" style={{ textAlign: "center", marginBottom: "5rem" }}>
+          
+          <div style={{ 
+            maxWidth: "1000px", 
+            margin: "0 auto", 
+            padding: "clamp(2rem, 5vw, 4rem)", 
+            background: "var(--bg-card)", 
+            borderRadius: "20px", 
+            border: "1px solid var(--card-border)", 
+            display: "flex", 
+            flexDirection: "column", 
+            gap: "3rem", 
+            boxShadow: "var(--card-shadow-hover)"
+          }}>
+            {/* Vision */}
+            <div>
               <h3
                 style={{
-                  color: "var(--text-heading)",
+                  fontSize: "2rem",
                   fontWeight: "700",
-                  marginBottom: "0.75rem",
+                  color: "var(--text-heading)",
+                  marginBottom: "1rem",
                   fontFamily: "IBM Plex Sans Arabic, sans-serif",
-                  fontSize: "1.1rem",
                 }}
               >
-                {value.title}
+                {t.about.vision.title}
               </h3>
-              <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: "1.8" }}>
-                {value.desc}
-              </p>
+              <div className="divider-gold" style={{ marginBottom: "2rem", margin: "0 auto" }} />
+              
+              <div style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                gap: "3rem",
+                alignItems: "center",
+                textAlign: "start"
+              }}>
+                <img 
+                  src="/186586fc-156b-4a28-98b3-cea832780483_removalai_preview.png" 
+                  alt={t.about.vision.title}
+                  style={{ width: "100%", maxWidth: "300px", height: "auto", borderRadius: "12px", objectFit: "cover", margin: "0 auto" }} 
+                />
+                <p style={{ flex: 1, minWidth: "300px", fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: "2" }}>
+                  {t.about.vision.desc}
+                </p>
+              </div>
             </div>
-          ))}
+
+            <div style={{ width: "100%", height: "1px", background: "var(--card-border)", opacity: 0.5 }}></div>
+
+            {/* Mission */}
+            <div>
+              <h3
+                style={{
+                  fontSize: "2rem",
+                  fontWeight: "700",
+                  color: "var(--text-heading)",
+                  marginBottom: "1rem",
+                  fontFamily: "IBM Plex Sans Arabic, sans-serif",
+                }}
+              >
+                {t.about.mission.title}
+              </h3>
+              <div className="divider-gold" style={{ marginBottom: "2rem", margin: "0 auto" }} />
+              
+              <div style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                gap: "3rem",
+                alignItems: "center",
+                textAlign: "start"
+              }}>
+                <img 
+                  src="/file_000000005b9471f49c8471f9ae71af1f.png" 
+                  alt={t.about.mission.title}
+                  style={{ width: "100%", maxWidth: "300px", height: "auto", borderRadius: "12px", objectFit: "cover", margin: "0 auto" }} 
+                />
+                <p style={{ flex: 1, minWidth: "300px", fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: "2" }}>
+                  {t.about.mission.desc}
+                </p>
+              </div>
+            </div>
+
+            <div style={{ width: "100%", height: "1px", background: "var(--card-border)", opacity: 0.5 }}></div>
+
+            {/* Values Grid */}
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "1.5rem",
+                textAlign: "start"
+              }}
+            >
+              {t.about.values.map((value, i) => (
+                <div
+                  key={i}
+                  className={`card-industrial reveal`}
+                  style={{
+                    flex: "1 1 200px",
+                    animationDelay: `${i * 0.1}s`,
+                  }}
+                >
+                  <div className="icon-box">
+                    {valueIcons[i + 1]}
+                  </div>
+                  <h3
+                    style={{
+                      color: "var(--text-heading)",
+                      fontWeight: "700",
+                      marginBottom: "0.75rem",
+                      fontFamily: "IBM Plex Sans Arabic, sans-serif",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    {value.title}
+                  </h3>
+                  <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: "1.8" }}>
+                    {value.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

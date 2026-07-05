@@ -35,11 +35,15 @@ export const translations = {
         { label: "سنة التأسيس", value: "2022" },
         { label: "خبرة الشركة", value: "5 سنوات" },
       ],
-      foundingStory: "قصة التأسيس",
-      foundingDesc: "بدأت الشركة بخبرة عملية وفهم عميق لمتطلبات العملاء مع التركيز على الجودة والالتزام والموثوقية في تنفيذ المشاريع.",
+      vision: {
+        title: "رؤيتنا",
+        desc: "أن نكون الخيار الأول والشركة الرائدة في قطاع التصنيع الصناعي على مستوى المملكة، من خلال تقديم حلول مبتكرة تسهم في التنمية المستدامة، وبما يتماشى مع أهداف ومستهدفات رؤية المملكة 2030 في تعزيز المحتوى المحلي ودعم الصناعة الوطنية."
+      },
+      mission: {
+        title: "رسالتنا",
+        desc: "تقديم خدمات تصنيع صناعية متكاملة بمعايير احترافية عالية تواكب تطور السوق وتلبي احتياجات العملاء بكفاءة وموثوقية."
+      },
       values: [
-        { title: "الرؤية", desc: "أن نكون من الشركات الرائدة في قطاع التصنيع الصناعي من خلال تقديم حلول مبتكرة وجودة عالية تسهم في التنمية المستدامة." },
-        { title: "الرسالة", desc: "تقديم خدمات تصنيع صناعية متكاملة بمعايير احترافية عالية تواكب تطور السوق وتلبي احتياجات العملاء بكفاءة وموثوقية." },
         { title: "الجودة والسلامة", desc: "الالتزام بأعلى معايير الجودة والسلامة في جميع مراحل العمل من التصنيع وحتى التسليم." },
         { title: "السرعة والكفاءة", desc: "سرعة الإنجاز والالتزام بالمواعيد، بفضل فريق عمل مؤهل وخبرة عملية، ومرونة في تلبية الاحتياجات." },
       ],
@@ -94,13 +98,13 @@ export const translations = {
       ctaText: "هل تبحث عن منتج محدد أو تريد طلب كمية؟",
       ctaBtn: "تواصل معنا للحصول على عرض سعر",
       items: [
-        { title: "سطحات عادي", category: "نقل", desc: "سطحات مسطحة مصنوعة من أجود أنواع الصلب، مثالية لنقل المعدات الثقيلة والبضائع الكبيرة بأمان وكفاءة.", tags: ["نقل", "صلب", "بضائع ثقيلة"] },
-        { title: "لوبدنقل", category: "نقل", desc: "لوبدنقل مصممة لنقل الحمولات الضخمة والبضائع الفائقة الأبعاد بمرونة عالية وقدرة تحمّل استثنائية.", tags: ["لوبدنقل", "حمولات ضخمة", "نقل"] },
-        { title: "هاوبر قمح", category: "زراعة", desc: "هاوبر مخصص لنقل وتخزين القمح والحبوب، مصنوع بمواد مقاومة للتآكل وسهلة التفريغ.", tags: ["قمح", "حبوب", "زراعة"] },
-        { title: "خزانات مياه وبترول", category: "خزانات", desc: "خزانات صناعية مُحكمة الإغلاق لنقل المياه والمواد البترولية بأعلى معايير السلامة والجودة.", tags: ["خزانات", "مياه", "بترول"] },
-        { title: "صناديق قلابات", category: "إنشاءات", desc: "صناديق قلابات متينة مصممة لنقل الرمل والمواد الإنشائية، مع آلية قلب هيدروليكية موثوقة.", tags: ["قلابات", "رمل", "إنشاءات"] },
-        { title: "حاويات انقاض", category: "إنشاءات", desc: "حاويات متخصصة في جمع ونقل مخلفات البناء والأنقاض بكفاءة عالية وسهولة في التحميل والتفريغ.", tags: ["حاويات", "أنقاض", "إنشاءات"] },
-        { title: "ناقلات سيارات", category: "نقل", desc: "ناقلات مصممة خصيصاً لنقل السيارات والمركبات باحترافية تامة مع الحفاظ عليها من أي أضرار.", tags: ["سيارات", "مركبات", "نقل"] },
+        { title: "سطحات عادي", category: "نقل", desc: "سطحات مسطحة مصنوعة من أجود أنواع الصلب، مثالية لنقل المعدات الثقيلة والبضائع الكبيرة بأمان وكفاءة.", tags: ["نقل", "صلب", "بضائع ثقيلة"], image: "/products/flatbed.jpg" },
+        { title: "لوبدنقل", category: "نقل", desc: "لوبدنقل مصممة لنقل الحمولات الضخمة والبضائع الفائقة الأبعاد بمرونة عالية وقدرة تحمّل استثنائية.", tags: ["لوبدنقل", "حمولات ضخمة", "نقل"], image: "/products/lowbed.jpg" },
+        { title: "هاوبر قمح", category: "زراعة", desc: "هاوبر مخصص لنقل وتخزين القمح والحبوب، مصنوع بمواد مقاومة للتآكل وسهلة التفريغ.", tags: ["قمح", "حبوب", "زراعة"], image: "/New folder/IMG-20260704-WA0018.jpg" },
+        { title: "خزانات مياه وبترول", category: "خزانات", desc: "خزانات صناعية مُحكمة الإغلاق لنقل المياه والمواد البترولية بأعلى معايير السلامة والجودة.", tags: ["خزانات", "مياه", "بترول"], image: "/products/tanks.jpg" },
+        { title: "صناديق قلابات", category: "إنشاءات", desc: "صناديق قلابات متينة مصممة لنقل الرمل والمواد الإنشائية، مع آلية قلب هيدروليكية موثوقة.", tags: ["قلابات", "رمل", "إنشاءات"], image: "/New folder/IMG-20260704-WA0018.jpg" },
+        { title: "حاويات انقاض", category: "إنشاءات", desc: "حاويات متخصصة في جمع ونقل مخلفات البناء والأنقاض بكفاءة عالية وسهولة في التحميل والتفريغ.", tags: ["حاويات", "أنقاض", "إنشاءات"], image: "/New folder/IMG-20260704-WA0018.jpg" },
+        { title: "ناقلات سيارات", category: "نقل", desc: "ناقلات مصممة خصيصاً لنقل السيارات والمركبات باحترافية تامة مع الحفاظ عليها من أي أضرار.", tags: ["سيارات", "مركبات", "نقل"], image: "/products/car-carriers.jpg" },
       ],
     },
     // Contact
@@ -186,11 +190,15 @@ export const translations = {
         { label: "Founded", value: "2022" },
         { label: "Experience", value: "5 Years" },
       ],
-      foundingStory: "Founding Story",
-      foundingDesc: "The company started with practical experience and deep understanding of client requirements with a focus on quality, commitment, and reliability in project execution.",
+      vision: {
+        title: "Our Vision",
+        desc: "To be the premier choice and leading company in the industrial manufacturing sector in the Kingdom, by providing innovative solutions that contribute to sustainable development, in full alignment with the goals of Saudi Vision 2030 to enhance local content and support national industry."
+      },
+      mission: {
+        title: "Our Mission",
+        desc: "Providing integrated industrial manufacturing services with high professional standards that keep pace with market evolution and meet client needs efficiently and reliably."
+      },
       values: [
-        { title: "Vision", desc: "To become one of the leading companies in the industrial manufacturing sector by providing innovative solutions and high quality contributing to sustainable development." },
-        { title: "Mission", desc: "Providing integrated industrial manufacturing services with high professional standards that keep pace with market evolution and meet client needs efficiently and reliably." },
         { title: "Quality & Safety", desc: "Adhering to the highest quality and safety standards throughout all stages of work from manufacturing to delivery." },
         { title: "Speed & Efficiency", desc: "Rapid accomplishment and commitment to deadlines, thanks to a qualified team with practical experience and flexibility in meeting needs." },
       ],
@@ -245,13 +253,13 @@ export const translations = {
       ctaText: "Looking for a specific product or need to place a bulk order?",
       ctaBtn: "Contact us for a price quote",
       items: [
-        { title: "Flatbed Trailer", category: "Transport", desc: "Flatbed trailers made from premium-grade steel, ideal for safely and efficiently transporting heavy equipment and large cargo.", tags: ["Transport", "Steel", "Heavy Load"] },
-        { title: "Lowbed Trailer", category: "Transport", desc: "Lowbed trailers designed to transport oversized and super-heavy loads with high flexibility and exceptional load capacity.", tags: ["Lowbed", "Heavy Load", "Transport"] },
-        { title: "Grain Hopper", category: "Agriculture", desc: "A hopper specifically designed to transport and store wheat and grain, made from corrosion-resistant materials for easy unloading.", tags: ["Wheat", "Grain", "Agriculture"] },
-        { title: "Water & Petroleum Tanks", category: "Tanks", desc: "Sealed industrial tanks for transporting water and petroleum products with the highest safety and quality standards.", tags: ["Tanks", "Water", "Petroleum"] },
-        { title: "Tipper Boxes", category: "Construction", desc: "Heavy-duty tipper boxes designed for transporting sand and construction materials, with a reliable hydraulic tipping mechanism.", tags: ["Tippers", "Sand", "Construction"] },
-        { title: "Debris Containers", category: "Construction", desc: "Specialized containers for efficiently collecting and transporting construction waste and debris, easy to load and unload.", tags: ["Containers", "Debris", "Construction"] },
-        { title: "Car Carriers", category: "Transport", desc: "Specially designed trailers for transporting cars and vehicles with full professionalism while preserving them from any damage.", tags: ["Cars", "Vehicles", "Transport"] },
+        { title: "Flatbed Trailer", category: "Transport", desc: "Flatbed trailers made from premium-grade steel, ideal for safely and efficiently transporting heavy equipment and large cargo.", tags: ["Transport", "Steel", "Heavy Load"], image: "/products/flatbed.jpg" },
+        { title: "Lowbed Trailer", category: "Transport", desc: "Lowbed trailers designed to transport oversized and super-heavy loads with high flexibility and exceptional load capacity.", tags: ["Lowbed", "Heavy Load", "Transport"], image: "/products/lowbed.jpg" },
+        { title: "Grain Hopper", category: "Agriculture", desc: "A hopper specifically designed to transport and store wheat and grain, made from corrosion-resistant materials for easy unloading.", tags: ["Wheat", "Grain", "Agriculture"], image: "/New folder/IMG-20260704-WA0018.jpg" },
+        { title: "Water & Petroleum Tanks", category: "Tanks", desc: "Sealed industrial tanks for transporting water and petroleum products with the highest safety and quality standards.", tags: ["Tanks", "Water", "Petroleum"], image: "/products/tanks.jpg" },
+        { title: "Tipper Boxes", category: "Construction", desc: "Heavy-duty tipper boxes designed for transporting sand and construction materials, with a reliable hydraulic tipping mechanism.", tags: ["Tippers", "Sand", "Construction"], image: "/New folder/IMG-20260704-WA0018.jpg" },
+        { title: "Debris Containers", category: "Construction", desc: "Specialized containers for efficiently collecting and transporting construction waste and debris, easy to load and unload.", tags: ["Containers", "Debris", "Construction"], image: "/New folder/IMG-20260704-WA0018.jpg" },
+        { title: "Car Carriers", category: "Transport", desc: "Specially designed trailers for transporting cars and vehicles with full professionalism while preserving them from any damage.", tags: ["Cars", "Vehicles", "Transport"], image: "/products/car-carriers.jpg" },
       ],
     },
     // Contact

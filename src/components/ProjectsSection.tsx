@@ -103,7 +103,7 @@ export function ProjectsSection() {
                 display: "flex",
                 flexDirection: "column",
               }}
-              onClick={() => setSelectedImage(BG_IMAGE)}
+              onClick={() => setSelectedImage((product as any).image || BG_IMAGE)}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(-8px)";
                 (e.currentTarget as HTMLDivElement).style.boxShadow =
@@ -135,7 +135,7 @@ export function ProjectsSection() {
                 }}
               >
                 <img
-                  src={BG_IMAGE}
+                  src={(product as any).image || BG_IMAGE}
                   alt={product.title}
                   style={{
                     width: "100%",

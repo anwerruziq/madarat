@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLang } from "@/context/LanguageContext";
 
-const statValues = [4, 400, 100];
-const statSuffixes = ["+", "+", "%"];
+const statValues = [5, 400, 100];
+const statSuffixes = ["", "+", "%"];
 const statIcons = [
   <i className="bx bx-calendar"></i>,
   <i className="bx bx-buildings"></i>,
@@ -67,7 +67,6 @@ export function StatsSection() {
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem", position: "relative" }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-          <div className="section-label" style={{ marginBottom: "1rem" }}>{t.stats.label}</div>
           <h2
             style={{
               fontSize: "clamp(1.8rem, 4vw, 2.8rem)",

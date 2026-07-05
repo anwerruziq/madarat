@@ -140,6 +140,18 @@ export function AboutSection() {
 
         {/* Vision, Mission & Values Section */}
         <div className="reveal" style={{ textAlign: "center", marginBottom: "5rem" }}>
+          <h3
+            style={{
+              fontSize: "2rem",
+              fontWeight: "700",
+              color: "var(--text-heading)",
+              marginBottom: "1rem",
+              fontFamily: "IBM Plex Sans Arabic, sans-serif",
+            }}
+          >
+            {t.about.vision.title}
+          </h3>
+          <div className="divider-gold" style={{ marginBottom: "2rem", margin: "0 auto" }} />
           
           <div style={{ 
             maxWidth: "1000px", 
@@ -155,19 +167,6 @@ export function AboutSection() {
           }}>
             {/* Vision */}
             <div>
-              <h3
-                style={{
-                  fontSize: "2rem",
-                  fontWeight: "700",
-                  color: "var(--text-heading)",
-                  marginBottom: "1rem",
-                  fontFamily: "IBM Plex Sans Arabic, sans-serif",
-                }}
-              >
-                {t.about.vision.title}
-              </h3>
-              <div className="divider-gold" style={{ marginBottom: "2rem", margin: "0 auto" }} />
-              
               <div style={{
                 display: "flex",
                 flexDirection: "row",
@@ -191,19 +190,6 @@ export function AboutSection() {
 
             {/* Mission */}
             <div>
-              <h3
-                style={{
-                  fontSize: "2rem",
-                  fontWeight: "700",
-                  color: "var(--text-heading)",
-                  marginBottom: "1rem",
-                  fontFamily: "IBM Plex Sans Arabic, sans-serif",
-                }}
-              >
-                {t.about.mission.title}
-              </h3>
-              <div className="divider-gold" style={{ marginBottom: "2rem", margin: "0 auto" }} />
-              
               <div style={{
                 display: "flex",
                 flexDirection: "row",

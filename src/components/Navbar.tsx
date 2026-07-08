@@ -14,7 +14,7 @@ export function Navbar() {
     { label: t.nav.contact, href: "#contact" },
   ];
 
-  const navBgColor = "#EAE6DB";
+  const navBgColor = "var(--bg-section-alt)";
   const navTextColor = "#1B4235";
 
   return (

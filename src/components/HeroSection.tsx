@@ -31,7 +31,7 @@ export function HeroSection() {
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
-        backgroundColor: "var(--bg-page)",
+        backgroundColor: "var(--bg-section-alt)",
         padding: "6rem 1rem 1rem 1rem",
       }}
     >

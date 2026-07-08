@@ -93,8 +93,8 @@ export function Footer() {
                 {t.dir === "rtl" ? "المقر الرئيسي" : "Headquarters"}
               </div>
               <p style={contactValueStyle}>
-                {t.dir === "rtl" ? "طريق الملك فهد، الرياض" : "King Fahd Road, Riyadh"}<br />
-                {t.dir === "rtl" ? "المملكة العربية السعودية" : "Saudi Arabia"}
+                {t.dir === "rtl" ? "الرياض حي المشاعل" : "Riyadh, Al Masha'il District"}<br />
+                {t.dir === "rtl" ? "المملكة العربية السعودية" : "Kingdom of Saudi Arabia"}
               </p>
             </div>
 
@@ -104,8 +104,8 @@ export function Footer() {
                 <i className="bx bx-phone-call" style={{ color: "var(--gold)", marginInlineEnd: "0.4rem" }} />
                 {t.dir === "rtl" ? "اتصل بنا" : "Phone"}
               </div>
-              <a href="tel:+96611XXXXXXX" style={contactLinkStyle}>+966 11 XXX XXXX</a>
-              <a href="tel:+96650XXXXXXX" style={contactLinkStyle}>+966 50 XXX XXXX</a>
+              <a href="tel:0534222044" style={contactLinkStyle}>0534222044</a>
+              <a href="tel:0533901113" style={contactLinkStyle}>0533901113</a>
             </div>
 
             {/* Email */}
@@ -114,10 +114,14 @@ export function Footer() {
                 <i className="bx bx-envelope" style={{ color: "var(--gold)", marginInlineEnd: "0.4rem" }} />
                 {t.dir === "rtl" ? "البريد الإلكتروني" : "Email"}
               </div>
-              <a href="mailto:info@madarat-ex.com" style={contactLinkStyle}>info@madarat-ex.com</a>
-              <a href="mailto:consulting@madarat-ex.com" style={contactLinkStyle}>consulting@madarat-ex.com</a>
+              <a href="mailto:admin@madarat-altanfeeth.com" style={contactLinkStyle}>admin@madarat-altanfeeth.com</a>
             </div>
+          </div>
 
+          {/* ── Column 4: Work Hours & Social ── */}
+          <div>
+            <h4 style={headingStyle}>{t.dir === "rtl" ? "معلومات إضافية" : "Additional Info"}</h4>
+            
             {/* Work Hours */}
             <div style={contactBlockStyle}>
               <div style={contactLabelStyle}>
@@ -141,7 +145,7 @@ export function Footer() {
                   { icon: "bx bxl-instagram", href: "#", name: "Instagram" },
                   { icon: "bx bxl-whatsapp", href: "#", name: "WhatsApp" },
                   { icon: "bx bxl-snapchat", href: "#", name: "Snapchat" },
-                  { icon: "bx bxl-meta", href: "#", name: "X" },
+                  { icon: "bx bxl-twitter", href: "#", name: "X" },
                   { icon: "bx bxl-linkedin", href: "#", name: "LinkedIn" },
                   { icon: "bx bxl-youtube", href: "#", name: "YouTube" },
                   { icon: "bx bxl-tiktok", href: "#", name: "TikTok" },
@@ -170,6 +174,7 @@ export function Footer() {
                     <i className={s.icon} />
                   </a>
                 ))}
+
               </div>
             </div>
           </div>
@@ -182,16 +187,13 @@ export function Footer() {
             padding: "1.5rem 0",
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
+            justifyContent: "center",
             flexWrap: "wrap",
             gap: "0.75rem",
           }}
         >
-          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.82rem", margin: 0 }}>
+          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.82rem", margin: 0, textAlign: "center" }}>
             © {year} {f.copyright}
-          </p>
-          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.82rem", margin: 0 }}>
-            {f.license}
           </p>
         </div>
       </div>

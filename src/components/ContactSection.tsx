@@ -135,7 +135,13 @@ export function ContactSection() {
                     </div>
                     {info.lines.map((line, j) => (
                       <div key={j} style={{ color: "var(--text-secondary)", fontSize: "0.85rem" }}>
-                        {line}
+                        {line.includes("@") ? (
+                          <a href={`mailto:${line}`} style={{ color: "var(--text-secondary)", textDecoration: "none" }}>
+                            {line}
+                          </a>
+                        ) : (
+                          line
+                        )}
                       </div>
                     ))}
                   </div>
@@ -170,13 +176,13 @@ export function ContactSection() {
               </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
                 {[
-                  { label: "Instagram", icon: <i className="bx bxl-instagram"></i> },
-                  { label: "WhatsApp", icon: <i className="bx bxl-whatsapp"></i> },
-                  { label: "Snapchat", icon: <i className="bx bxl-snapchat"></i> },
-                  { label: "X", icon: <i className="bx bxl-meta"></i> },
-                  { label: "LinkedIn", icon: <i className="bx bxl-linkedin"></i> },
-                  { label: "YouTube", icon: <i className="bx bxl-youtube"></i> },
-                  { label: "TikTok", icon: <i className="bx bxl-tiktok"></i> },
+                  { label: "Instagram", icon: <i className="bx bxl-instagram"></i>, color: "#c0607a" },
+                  { label: "WhatsApp", icon: <i className="bx bxl-whatsapp"></i>, color: "#4caf7d" },
+                  { label: "Snapchat", icon: <i className="bx bxl-snapchat"></i>, color: "#b5a800" },
+                  { label: "X", icon: <i className="bx bxl-twitter"></i>, color: "#555555" },
+                  { label: "LinkedIn", icon: <i className="bx bxl-linkedin"></i>, color: "#3a7ab5" },
+                  { label: "YouTube", icon: <i className="bx bxl-youtube"></i>, color: "#c0392b" },
+                  { label: "TikTok", icon: <i className="bx bxl-tiktok"></i>, color: "#555555" },
                 ].map((social, i) => (
                   <button
                     key={i}
@@ -184,29 +190,16 @@ export function ContactSection() {
                       width: "48px",
                       height: "48px",
                       borderRadius: "50%",
-                      background: "var(--bg-card)",
-                      border: "1px solid var(--card-border)",
+                      background: `${social.color}18`,
+                      border: `1.5px solid ${social.color}50`,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      fontSize: "1.5rem",
+                      fontSize: "1.4rem",
                       cursor: "pointer",
-                      transition: "all 0.3s ease",
-                      color: "var(--text-heading)",
+                      color: social.color,
                     }}
                     aria-label={social.label}
-                    onMouseEnter={(e) => {
-                      const el = e.currentTarget;
-                      el.style.borderColor = "var(--gold)";
-                      el.style.color = "var(--gold)";
-                      el.style.transform = "translateY(-3px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      const el = e.currentTarget;
-                      el.style.borderColor = "var(--card-border)";
-                      el.style.color = "var(--text-heading)";
-                      el.style.transform = "translateY(0)";
-                    }}
                   >
                     {social.icon}
                   </button>

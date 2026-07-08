@@ -101,39 +101,7 @@ export function AboutSection() {
                 {t.about.p2}
               </p>
 
-              {/* Key facts */}
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.5rem" }}>
-                {t.about.facts.map((fact, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "0.5rem",
-                      padding: "1.5rem",
-                      background: "var(--bg-section-alt)",
-                      border: "1px solid var(--card-border)",
-                      borderRadius: "12px",
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-5px)";
-                      e.currentTarget.style.borderColor = "var(--gold)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.borderColor = "var(--card-border)";
-                    }}
-                  >
-                    <div style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
-                      {fact.label}
-                    </div>
-                    <div style={{ fontWeight: "700", color: "var(--gold)", fontSize: "1.25rem", fontFamily: "IBM Plex Sans Arabic, sans-serif" }}>
-                      {fact.value}
-                    </div>
-                  </div>
-                ))}
-              </div>
+
             </div>
           </div>
         </div>

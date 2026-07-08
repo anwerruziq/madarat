@@ -29,12 +29,7 @@ export const translations = {
       titleHighlight: "مدارات التنفيذ",
       p1: "مدارات التنفيذ شركة متخصصة في التصنيع الصناعي، تقدم حلول متكاملة لتصنيع الهياكل المعدنية والمقطورات والمعدات الصناعية باحترافية وجودة عالية، مع الالتزام بمعايير السلامة والكفاءة التشغيلية.",
       p2: "تأسست الشركة انطلاقاً من رؤية طموحة لتقديم خدمات تصنيع صناعية عالية الجودة تلبي احتياجات السوق المحلي وتواكب التطور المتسارع في قطاع الأعمال بالمملكة العربية السعودية، للمساهمة في تحقيق رؤية المملكة 2030.",
-      facts: [
-        { label: "النشاط", value: "تصنيع الهياكل والمقطورات" },
-        { label: "المقر الرئيسي", value: "الرياض - حي المشاعل" },
-        { label: "نطاق العمل", value: "كافة مناطق المملكة" },
-        { label: "الجودة", value: "مطابقة للمواصفات القياسية" },
-      ],
+
       vision: {
         title: "رؤيتنا",
         desc: "أن نكون الخيار الأول والشركة الرائدة في قطاع التصنيع الصناعي على مستوى المملكة، من خلال تقديم حلول مبتكرة تسهم في التنمية المستدامة، وبما يتماشى مع أهداف ومستهدفات رؤية المملكة 2030 في تعزيز المحتوى المحلي ودعم الصناعة الوطنية."
@@ -186,12 +181,7 @@ export const translations = {
       titleHighlight: "Madarat Al-Tanfeedh",
       p1: "Madarat Al-Tanfeedh is a specialized industrial manufacturing company, offering integrated solutions for manufacturing metal structures, trailers, and industrial equipment with professionalism and high quality, adhering to safety and operational efficiency standards.",
       p2: "The company was founded with an ambitious vision to provide high-quality industrial manufacturing services that meet local market needs and keep pace with the rapid development in the Saudi business sector, contributing to the realization of Vision 2030.",
-      facts: [
-        { label: "Activity", value: "Structures & Trailers" },
-        { label: "Headquarters", value: "Riyadh - Al Masha'il" },
-        { label: "Coverage", value: "All Over Saudi Arabia" },
-        { label: "Quality", value: "High Standards Compliant" },
-      ],
+
       vision: {
         title: "Our Vision",
         desc: "To be the premier choice and leading company in the industrial manufacturing sector in the Kingdom, by providing innovative solutions that contribute to sustainable development, in full alignment with the goals of Saudi Vision 2030 to enhance local content and support national industry."

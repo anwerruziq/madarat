@@ -48,7 +48,7 @@ export function Footer() {
               <img
                 src="/logo.png"
                 alt="مدارات التنفيذ"
-                style={{ width: "64px", height: "64px", borderRadius: "10px", objectFit: "contain" }}
+                style={{ width: "80px", height: "80px", borderRadius: "10px", objectFit: "contain" }}
               />
               <div>
                 <div style={{ color: "var(--gold)", fontWeight: "700", fontSize: "1.1rem", fontFamily: "IBM Plex Sans Arabic, sans-serif" }}>
@@ -143,7 +143,7 @@ export function Footer() {
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "0.6rem", maxWidth: "180px" }}>
                 {[
                   { icon: "bx bxl-instagram", href: "#", name: "Instagram" },
-                  { icon: "bx bxl-whatsapp", href: "#", name: "WhatsApp" },
+                  { icon: "bx bxl-whatsapp", href: "https://wa.me/966555954756", name: "WhatsApp" },
                   { icon: "bx bxl-snapchat", href: "#", name: "Snapchat" },
                   { icon: "bx bxl-twitter", href: "#", name: "X" },
                   { icon: "bx bxl-linkedin", href: "#", name: "LinkedIn" },

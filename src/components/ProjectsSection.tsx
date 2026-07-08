@@ -177,10 +177,6 @@ export function ProjectsSection() {
                     lineHeight: "1.6",
                     margin: 0,
                     fontFamily: "IBM Plex Sans Arabic, sans-serif",
-                    display: "-webkit-box",
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
                   }}
                 >
                   {product.desc}

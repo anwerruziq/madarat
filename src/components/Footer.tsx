@@ -46,7 +46,7 @@ export function Footer() {
             {/* Logo */}
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
               <img
-                src="/LOGO MADARAT.png"
+                src="/logo.png"
                 alt="مدارات التنفيذ"
                 style={{ width: "64px", height: "64px", borderRadius: "10px", objectFit: "contain" }}
               />

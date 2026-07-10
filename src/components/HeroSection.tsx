@@ -152,6 +152,14 @@ export function HeroSection() {
             .hero-btn-animate {
               animation: textDescAnimate 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.7s both;
             }
+
+            @media (max-width: 768px) {
+              .hero-content-box {
+                padding: 2rem 1.5rem !important;
+                align-items: flex-start !important;
+                text-align: start !important;
+              }
+            }
           `}
         </style>
 
@@ -200,6 +208,7 @@ export function HeroSection() {
         {/* Content */}
         <div
           key={t.dir}
+          className="hero-content-box"
           style={{
             position: "relative",
             zIndex: 10,

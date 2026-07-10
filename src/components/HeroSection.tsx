@@ -24,43 +24,7 @@ export function HeroSection() {
     return () => window.removeEventListener("mousemove", onMouseMove);
   }, []);
 
-  // Scroll-shrink effect: video shrinks as user scrolls down
-  const handleScroll = useCallback(() => {
-    const wrapper = videoWrapperRef.current;
-    if (!wrapper) return;
 
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    if (scrollY <= 5) {
-      // At the top of the page, remove inline styles so the CSS animation can play
-      wrapper.style.removeProperty("transform");
-      wrapper.style.removeProperty("opacity");
-      wrapper.style.removeProperty("border-radius");
-      return;
-    }
-
-    // Start shrinking, maxing out at 1 viewport height
-    const progress = Math.min(scrollY / windowHeight, 1);
-    
-    // Scale from 1 → 0 linearly with scroll
-    const scale = Math.max(0, 1 - progress);
-    
-    // Stay exactly in the center
-    wrapper.style.setProperty("transform", `translate(0%, 0%) scale(${scale})`, "important");
-    
-    // Fade out smoothly as it reaches 0
-    wrapper.style.setProperty("opacity", `${1 - progress}`, "important");
-    
-    // Increase border radius as it shrinks to make it look like a smooth circle/dot before disappearing
-    const borderRadius = 24 + (progress * 200);
-    wrapper.style.setProperty("border-radius", `${borderRadius}px`, "important");
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Initial call
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
 
   return (
     <section

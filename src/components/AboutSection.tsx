@@ -232,7 +232,7 @@ export function AboutSection() {
                   alt={t.about.vision.title}
                   style={{ width: "100%", maxWidth: "300px", height: "auto", borderRadius: "12px", objectFit: "cover", margin: "0 auto" }} 
                 />
-                <p style={{ flex: 1, minWidth: "300px", fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: "2" }}>
+                <p style={{ flex: 1, minWidth: "250px", fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: "2" }}>
                   {t.about.vision.desc}
                 </p>
               </div>
@@ -273,7 +273,7 @@ export function AboutSection() {
                     {videoVisible && <source src="/all-1.mp4" type="video/mp4" />}
                   </video>
                 </div>
-                <p style={{ flex: 1, minWidth: "300px", fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: "2" }}>
+                <p style={{ flex: 1, minWidth: "250px", fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: "2" }}>
                   {t.about.mission.desc}
                 </p>
               </div>

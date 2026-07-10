@@ -31,6 +31,14 @@ export function HeroSection() {
 
     const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
+    if (scrollY <= 5) {
+      // At the top of the page, remove inline styles so the CSS animation can play
+      wrapper.style.removeProperty("transform");
+      wrapper.style.removeProperty("opacity");
+      wrapper.style.removeProperty("border-radius");
+      return;
+    }
+
     // Start shrinking, maxing out at 1 viewport height
     const progress = Math.min(scrollY / windowHeight, 1);
     

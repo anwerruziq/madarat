@@ -141,15 +141,14 @@ export function HeroSection() {
               objectPosition: "center",
             }}
           >
-            <source src="/حول_الصوره_لفيديو_اجعل_الكاميرا_202607011653.mp4" type="video/mp4" />
+            <source src="/all.mp4" type="video/mp4" />
           </video>
-          {/* Dark overlay for text readability */}
+          {/* Dark overlay for text readability - reduced opacity for clearer video */}
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background: "linear-gradient(to right, rgba(0, 20, 10, 0.8) 0%, rgba(0, 20, 10, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%)",
-              backgroundColor: "rgba(0, 30, 20, 0.4)",
+              background: "linear-gradient(to right, rgba(0, 10, 5, 0.45) 0%, rgba(0, 10, 5, 0.2) 60%, rgba(0, 0, 0, 0.05) 100%)",
             }}
           />
         </div>

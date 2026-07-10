@@ -9,7 +9,6 @@ export const translations = {
     nav: {
       home: "الرئيسية",
       about: "من نحن",
-      services: "خدماتنا",
       projects: "منتجاتنا",
       contact: "تواصل معنا",
       cta: "استشارة مجانية",
@@ -18,7 +17,7 @@ export const translations = {
     hero: {
       title: "مدارات التنفيذ",
       subtitle: "",
-      desc: "نقدم حلول تصنيع متكاملة للهياكل المعدنية والمقطورات والمعدات الصناعية باحترافية وجودة عالية",
+      desc: "نقدم حلول تصنيع وتشييد ومقاولات متكاملة للهياكل المعدنية والمقطورات والمعدات الصناعية والمنشآت بجودة عالية واحترافية تامة",
       cta1: "تواصل معنا",
       cta2: "اكتشف منتجاتنا",
     },
@@ -27,8 +26,8 @@ export const translations = {
       label: "من نحن",
       title: "نبذة عامة عن",
       titleHighlight: "مدارات التنفيذ",
-      p1: "مدارات التنفيذ شركة متخصصة في التصنيع الصناعي، تقدم حلول متكاملة لتصنيع الهياكل المعدنية والمقطورات والمعدات الصناعية باحترافية وجودة عالية، مع الالتزام بمعايير السلامة والكفاءة التشغيلية.",
-      p2: "تأسست الشركة انطلاقاً من رؤية طموحة لتقديم خدمات تصنيع صناعية عالية الجودة تلبي احتياجات السوق المحلي وتواكب التطور المتسارع في قطاع الأعمال بالمملكة العربية السعودية، للمساهمة في تحقيق رؤية المملكة 2030.",
+      p1: "مدارات التنفيذ شركة متخصصة في التصنيع الصناعي والمقاولات، تقدم حلول متكاملة لتصنيع الهياكل المعدنية والمقطورات والمعدات الصناعية وتنفيذ المشاريع الإنشائية باحترافية وجودة عالية، مع الالتزام بمعايير السلامة والكفاءة التشغيلية.",
+      p2: "تأسست الشركة انطلاقاً من رؤية طموحة لتقديم خدمات تصنيع صناعية ومقاولات عامة عالية الجودة تلبي احتياجات السوق المحلي وتواكب التطور المتسارع في قطاع الأعمال بالمملكة العربية السعودية، للمساهمة في تحقيق رؤية المملكة 2030.",
 
       vision: {
         title: "رؤيتنا",
@@ -36,7 +35,7 @@ export const translations = {
       },
       mission: {
         title: "رسالتنا",
-        desc: "تقديم خدمات تصنيع صناعية متكاملة بمعايير احترافية عالية تواكب تطور السوق وتلبي احتياجات العملاء بكفاءة وموثوقية."
+        desc: "تقديم خدمات تصنيع صناعية متكاملة، إلى جانب تنفيذ أعمال المقاولات العامة وتوفير مواد البناء، بمعايير احترافية عالية تواكب تطور السوق وتلبي احتياجات العملاء بكفاءة وموثوقية."
       },
       values: [
         { title: "الجودة والسلامة", desc: "الالتزام بأعلى معايير الجودة والسلامة في جميع مراحل العمل من التصنيع وحتى التسليم." },
@@ -47,8 +46,8 @@ export const translations = {
     services: {
       label: "خدماتنا",
       title: "نقدم لك الحلول",
-      titleHighlight: "الصناعية المتكاملة",
-      desc: "نقدم مجموعة شاملة من الخدمات الصناعية والمقاولات والتوريد لتلبية كافة احتياجات مشاريعك بأعلى معايير الجودة والاحترافية.",
+      titleHighlight: "الصناعية والمقاولاتية المتكاملة",
+      desc: "نقدم مجموعة شاملة من خدمات التصنيع الصناعي والمقاولات والإنشاءات والتوريد لتلبية كافة احتياجات مشاريعك بأعلى معايير الجودة والاحترافية.",
       requestService: "طلب الخدمة",
       items: [
         {
@@ -161,7 +160,6 @@ export const translations = {
     nav: {
       home: "Home",
       about: "About Us",
-      services: "Services",
       projects: "Products",
       contact: "Contact Us",
       cta: "Free Consultation",
@@ -170,7 +168,7 @@ export const translations = {
     hero: {
       title: "Madarat Al-Tanfeedh",
       subtitle: "",
-      desc: "Providing integrated manufacturing solutions for metal structures, trailers, and industrial equipment with high quality and professionalism",
+      desc: "Providing integrated manufacturing, construction, and contracting solutions for metal structures, trailers, industrial equipment, and facilities with high quality and professionalism",
       cta1: "Contact Us",
       cta2: "Explore Our Products",
     },
@@ -179,8 +177,8 @@ export const translations = {
       label: "About Us",
       title: "Overview of",
       titleHighlight: "Madarat Al-Tanfeedh",
-      p1: "Madarat Al-Tanfeedh is a specialized industrial manufacturing company, offering integrated solutions for manufacturing metal structures, trailers, and industrial equipment with professionalism and high quality, adhering to safety and operational efficiency standards.",
-      p2: "The company was founded with an ambitious vision to provide high-quality industrial manufacturing services that meet local market needs and keep pace with the rapid development in the Saudi business sector, contributing to the realization of Vision 2030.",
+      p1: "Madarat Al-Tanfeedh is a specialized industrial manufacturing and contracting company, offering integrated solutions for manufacturing metal structures, trailers, industrial equipment, and executing construction projects with professionalism and high quality, adhering to safety and operational efficiency standards.",
+      p2: "The company was founded with an ambitious vision to provide high-quality industrial manufacturing and general contracting services that meet local market needs and keep pace with the rapid development in the Saudi business sector, contributing to the realization of Vision 2030.",
 
       vision: {
         title: "Our Vision",
@@ -188,7 +186,7 @@ export const translations = {
       },
       mission: {
         title: "Our Mission",
-        desc: "Providing integrated industrial manufacturing services with high professional standards that keep pace with market evolution and meet client needs efficiently and reliably."
+        desc: "Providing integrated industrial manufacturing services, alongside general contracting and building materials supply, with high professional standards that keep pace with market evolution and meet client needs efficiently and reliably."
       },
       values: [
         { title: "Quality & Safety", desc: "Adhering to the highest quality and safety standards throughout all stages of work from manufacturing to delivery." },
@@ -199,8 +197,8 @@ export const translations = {
     services: {
       label: "Our Services",
       title: "Providing Integrated",
-      titleHighlight: "Industrial Solutions",
-      desc: "We provide a comprehensive range of industrial, contracting, and supply services to meet all your project needs with the highest standards of quality and professionalism.",
+      titleHighlight: "Industrial & Contracting Solutions",
+      desc: "We provide a comprehensive range of industrial manufacturing, contracting, construction, and supply services to meet all your project needs with the highest standards of quality and professionalism.",
       requestService: "Request Service",
       items: [
         {

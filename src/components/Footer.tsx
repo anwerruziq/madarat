@@ -9,7 +9,6 @@ export function Footer() {
     nav: [
       { label: t.nav.home, href: "#hero" },
       { label: t.nav.about, href: "#about" },
-      { label: t.nav.services, href: "#services" },
       { label: t.nav.projects, href: "#projects" },
       { label: t.nav.contact, href: "#contact" },
     ],

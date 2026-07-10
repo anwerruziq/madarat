@@ -176,7 +176,7 @@ export function ContactSection() {
               </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
                 {[
-                  { label: "X (Twitter)", icon: <i className="bx bxl-twitter"></i>, color: "#1DA1F2", href: "https://x.com/madara_ksa1" },
+                  { label: "X", icon: <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "1.2em", height: "1.2em" }}><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>, color: "#000000", href: "https://x.com/madara_ksa1" },
                   { label: "YouTube", icon: <i className="bx bxl-youtube"></i>, color: "#c0392b", href: "https://youtube.com/@madarat_ksa?si=nC2zJnH7BlDYwTgN" },
                   { label: "Instagram", icon: <i className="bx bxl-instagram"></i>, color: "#c0607a", href: "https://www.instagram.com/madarat_ksa?igsh=MWUycW5zaHVpdWw4ZQ==" },
                   { label: "TikTok", icon: <i className="bx bxl-tiktok"></i>, color: "#000000", href: "https://www.tiktok.com/@madarat_ksa?_r=1&_t=ZS-97vTT7CWK4W" },

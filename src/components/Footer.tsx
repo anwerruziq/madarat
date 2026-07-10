@@ -141,12 +141,12 @@ export function Footer() {
               </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "0.6rem", maxWidth: "180px" }}>
                 {[
-                  { icon: "bx bxl-twitter", href: "https://x.com/madara_ksa1", name: "X" },
+                  { icon: "", customIcon: <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "0.9em", height: "0.9em" }}><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>, href: "https://x.com/madara_ksa1", name: "X" },
                   { icon: "bx bxl-youtube", href: "https://youtube.com/@madarat_ksa?si=nC2zJnH7BlDYwTgN", name: "YouTube" },
                   { icon: "bx bxl-instagram", href: "https://www.instagram.com/madarat_ksa?igsh=MWUycW5zaHVpdWw4ZQ==", name: "Instagram" },
                   { icon: "bx bxl-tiktok", href: "https://www.tiktok.com/@madarat_ksa?_r=1&_t=ZS-97vTT7CWK4W", name: "TikTok" },
                   { icon: "bx bxl-whatsapp", href: "https://wa.me/966555954756", name: "WhatsApp" },
-                ].map((s, i) => (
+                ].map((s: any, i) => (
                   <a
                     key={i}
                     href={s.href}
@@ -168,7 +168,7 @@ export function Footer() {
                       (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.65)";
                     }}
                   >
-                    <i className={s.icon} />
+                    {s.customIcon ? s.customIcon : <i className={s.icon} />}
                   </a>
                 ))}
 

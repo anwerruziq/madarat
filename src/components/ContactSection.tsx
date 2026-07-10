@@ -176,13 +176,11 @@ export function ContactSection() {
               </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
                 {[
-                  { label: "Instagram", icon: <i className="bx bxl-instagram"></i>, color: "#c0607a", href: "#" },
+                  { label: "X (Twitter)", icon: <i className="bx bxl-twitter"></i>, color: "#1DA1F2", href: "https://x.com/madara_ksa1" },
+                  { label: "YouTube", icon: <i className="bx bxl-youtube"></i>, color: "#c0392b", href: "https://youtube.com/@madarat_ksa?si=nC2zJnH7BlDYwTgN" },
+                  { label: "Instagram", icon: <i className="bx bxl-instagram"></i>, color: "#c0607a", href: "https://www.instagram.com/madarat_ksa?igsh=MWUycW5zaHVpdWw4ZQ==" },
+                  { label: "TikTok", icon: <i className="bx bxl-tiktok"></i>, color: "#000000", href: "https://www.tiktok.com/@madarat_ksa?_r=1&_t=ZS-97vTT7CWK4W" },
                   { label: "WhatsApp", icon: <i className="bx bxl-whatsapp"></i>, color: "#4caf7d", href: "https://wa.me/966555954756" },
-                  { label: "Snapchat", icon: <i className="bx bxl-snapchat"></i>, color: "#b5a800", href: "#" },
-
-                  { label: "LinkedIn", icon: <i className="bx bxl-linkedin"></i>, color: "#3a7ab5", href: "#" },
-                  { label: "YouTube", icon: <i className="bx bxl-youtube"></i>, color: "#c0392b", href: "#" },
-                  { label: "TikTok", icon: <i className="bx bxl-tiktok"></i>, color: "#555555", href: "#" },
                 ].map((social, i) => (
                   <a
                     key={i}

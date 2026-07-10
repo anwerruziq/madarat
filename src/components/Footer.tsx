@@ -141,13 +141,11 @@ export function Footer() {
               </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "0.6rem", maxWidth: "180px" }}>
                 {[
-                  { icon: "bx bxl-instagram", href: "#", name: "Instagram" },
+                  { icon: "bx bxl-twitter", href: "https://x.com/madara_ksa1", name: "X" },
+                  { icon: "bx bxl-youtube", href: "https://youtube.com/@madarat_ksa?si=nC2zJnH7BlDYwTgN", name: "YouTube" },
+                  { icon: "bx bxl-instagram", href: "https://www.instagram.com/madarat_ksa?igsh=MWUycW5zaHVpdWw4ZQ==", name: "Instagram" },
+                  { icon: "bx bxl-tiktok", href: "https://www.tiktok.com/@madarat_ksa?_r=1&_t=ZS-97vTT7CWK4W", name: "TikTok" },
                   { icon: "bx bxl-whatsapp", href: "https://wa.me/966555954756", name: "WhatsApp" },
-                  { icon: "bx bxl-snapchat", href: "#", name: "Snapchat" },
-                  { icon: "bx bxl-twitter", href: "#", name: "X" },
-                  { icon: "bx bxl-linkedin", href: "#", name: "LinkedIn" },
-                  { icon: "bx bxl-youtube", href: "#", name: "YouTube" },
-                  { icon: "bx bxl-tiktok", href: "#", name: "TikTok" },
                 ].map((s, i) => (
                   <a
                     key={i}

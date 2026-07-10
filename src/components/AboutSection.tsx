@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { useLang } from "@/context/LanguageContext";
 
 const valueIcons = [
@@ -10,8 +10,11 @@ const valueIcons = [
 
 export function AboutSection() {
   const ref = useRef<HTMLDivElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
   const { t } = useLang();
+  const [videoVisible, setVideoVisible] = useState(false);
 
+  // Intersection observer for reveal animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -30,6 +33,47 @@ export function AboutSection() {
     return () => observer.disconnect();
   }, []);
 
+  // Scroll-driven video appearance in About section
+  const handleScroll = useCallback(() => {
+    const container = videoContainerRef.current;
+    if (!container) return;
+
+    const rect = container.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // Calculate how far the container is into the viewport
+    // Start animation when the container enters the bottom of the viewport
+    const enterPoint = windowHeight; // bottom of viewport
+    const fullPoint = windowHeight * 0.4; // 40% from top = fully visible
+    
+    if (rect.top < enterPoint && rect.bottom > 0) {
+      // Container is in viewport
+      const progress = Math.min(Math.max((enterPoint - rect.top) / (enterPoint - fullPoint), 0), 1);
+      
+      // Scale from 0.3 → 1
+      const scale = 0.3 + progress * 0.7;
+      // Opacity from 0 → 1
+      const opacity = progress;
+      // Slight translate from below
+      const translateY = (1 - progress) * 40;
+      
+      container.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+      container.style.opacity = `${opacity}`;
+      setVideoVisible(progress > 0.1);
+    } else if (rect.top >= enterPoint) {
+      // Container is below viewport
+      container.style.transform = "scale(0.3) translateY(40px)";
+      container.style.opacity = "0";
+      setVideoVisible(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial call
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   return (
     <section
       id="about"
@@ -42,6 +86,46 @@ export function AboutSection() {
         overflow: "hidden",
       }}
     >
+      <style>
+        {`
+          @keyframes aboutVideoGlow {
+            0%, 100% {
+              box-shadow: 0 0 20px rgba(201, 162, 39, 0.15), 0 8px 32px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+              box-shadow: 0 0 40px rgba(201, 162, 39, 0.25), 0 12px 48px rgba(0, 0, 0, 0.4);
+            }
+          }
+          .about-video-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 0 auto;
+            transform-origin: center center;
+            will-change: transform, opacity;
+            animation: aboutVideoGlow 3s ease-in-out infinite;
+            border: 2px solid rgba(201, 162, 39, 0.3);
+          }
+          .about-video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+          .about-video-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            pointer-events: none;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+          }
+        `}
+      </style>
+
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem", position: "relative" }}>
         {/* Section Header */}
         <div className="reveal" style={{ textAlign: "center", marginBottom: "4rem" }}>
@@ -156,7 +240,7 @@ export function AboutSection() {
 
             <div style={{ width: "100%", height: "1px", background: "var(--card-border)", opacity: 0.5 }}></div>
 
-            {/* Mission */}
+            {/* Mission - Video replaces image */}
             <div>
               <div style={{
                 display: "flex",
@@ -166,11 +250,29 @@ export function AboutSection() {
                 alignItems: "center",
                 textAlign: "start"
               }}>
-                <img 
-                  src="/file_000000005b9471f49c8471f9ae71af1f.png" 
-                  alt={t.about.mission.title}
-                  style={{ width: "100%", maxWidth: "300px", height: "auto", borderRadius: "12px", objectFit: "cover", margin: "0 auto" }} 
-                />
+                {/* Video container with scroll-driven scale animation */}
+                <div
+                  ref={videoContainerRef}
+                  className="about-video-container"
+                  style={{
+                    transform: "scale(0.3) translateY(40px)",
+                    opacity: 0,
+                  }}
+                >
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  >
+                    {videoVisible && <source src="/all-1.mp4" type="video/mp4" />}
+                  </video>
+                </div>
                 <p style={{ flex: 1, minWidth: "300px", fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: "2" }}>
                   {t.about.mission.desc}
                 </p>

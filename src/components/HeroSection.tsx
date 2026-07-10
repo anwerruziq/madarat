@@ -1,10 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { useLang } from "@/context/LanguageContext";
 
 export function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
+  const videoWrapperRef = useRef<HTMLDivElement>(null);
   const { t, lang } = useLang();
 
+  // Parallax mouse effect
   useEffect(() => {
     const hero = heroRef.current;
     if (!hero) return;
@@ -21,6 +23,36 @@ export function HeroSection() {
     window.addEventListener("mousemove", onMouseMove);
     return () => window.removeEventListener("mousemove", onMouseMove);
   }, []);
+
+  // Scroll-shrink effect: video shrinks as user scrolls down
+  const handleScroll = useCallback(() => {
+    const wrapper = videoWrapperRef.current;
+    if (!wrapper) return;
+
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    // Start shrinking, maxing out at 1 viewport height
+    const progress = Math.min(scrollY / windowHeight, 1);
+    
+    // Scale from 1 → 0 linearly with scroll
+    const scale = Math.max(0, 1 - progress);
+    
+    // Stay exactly in the center
+    wrapper.style.setProperty("transform", `translate(0%, 0%) scale(${scale})`, "important");
+    
+    // Fade out smoothly as it reaches 0
+    wrapper.style.setProperty("opacity", `${1 - progress}`, "important");
+    
+    // Increase border radius as it shrinks to make it look like a smooth circle/dot before disappearing
+    const borderRadius = 24 + (progress * 200);
+    wrapper.style.setProperty("border-radius", `${borderRadius}px`, "important");
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial call
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
     <section
@@ -115,14 +147,18 @@ export function HeroSection() {
           `}
         </style>
 
-        {/* Animated Background Wrapper for Video and Overlay */}
+        {/* Animated Background Wrapper for Video and Overlay - with scroll shrink */}
         <div
+          ref={videoWrapperRef}
           key={lang}
           className="hero-video-animate-in"
           style={{
             position: "absolute",
             inset: 0,
             overflow: "hidden",
+            transformOrigin: "center center",
+            transition: "transform 0.05s linear, opacity 0.05s linear",
+            willChange: "transform, opacity",
           }}
         >
           {/* Video Background */}
@@ -141,7 +177,7 @@ export function HeroSection() {
               objectPosition: "center",
             }}
           >
-            <source src="/all.mp4" type="video/mp4" />
+            <source src="/all-1.mp4" type="video/mp4" />
           </video>
           {/* Dark overlay for text readability - reduced opacity for clearer video */}
           <div
